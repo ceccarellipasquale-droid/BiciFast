@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Velocore - Catálogo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-background": "#e0e3e4",
+                      "on-tertiary-fixed-variant": "#42484a",
+                      "on-surface": "#e0e3e4",
+                      "on-error-container": "#ffdad6",
+                      "error-container": "#93000a",
+                      "secondary": "#ffffff",
+                      "inverse-surface": "#e0e3e4",
+                      "inverse-on-surface": "#2d3132",
+                      "on-tertiary": "#2b3133",
+                      "surface-variant": "#313536",
+                      "on-secondary-fixed-variant": "#3f4c00",
+                      "background": "#101415",
+                      "tertiary-fixed-dim": "#c2c7ca",
+                      "primary-container": "#bec6e0",
+                      "outline": "#909097",
+                      "inverse-primary": "#565e74",
+                      "surface-container-highest": "#313536",
+                      "on-secondary-container": "#5a6c00",
+                      "tertiary-fixed": "#dee3e6",
+                      "on-primary-fixed-variant": "#3e465c",
+                      "surface-dim": "#101415",
+                      "secondary-container": "#cdf200",
+                      "on-tertiary-fixed": "#171d1e",
+                      "on-primary-fixed": "#131b2e",
+                      "surface-bright": "#363a3b",
+                      "surface-container-lowest": "#0b0f10",
+                      "error": "#ffb4ab",
+                      "outline-variant": "#45464d",
+                      "surface-container": "#1c2021",
+                      "primary-fixed": "#dae2fd",
+                      "secondary-fixed-dim": "#b3d400",
+                      "on-secondary-fixed": "#181e00",
+                      "surface": "#101415",
+                      "on-surface-variant": "#c6c6cd",
+                      "on-tertiary-container": "#4d5355",
+                      "on-error": "#690005",
+                      "secondary-fixed": "#cdf200",
+                      "surface-container-low": "#181c1d",
+                      "on-secondary": "#2b3400",
+                      "surface-tint": "#bec6e0",
+                      "on-primary-container": "#4a5268",
+                      "primary": "#dae2fd",
+                      "surface-container-high": "#272b2c",
+                      "tertiary": "#dee3e6",
+                      "primary-fixed-dim": "#bec6e0",
+                      "on-primary": "#283044",
+                      "tertiary-container": "#c1c7ca"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "16px",
+                      "stack-lg": "32px",
+                      "stack-xl": "64px",
+                      "unit": "8px",
+                      "container-margin-desktop": "48px",
+                      "stack-sm": "8px",
+                      "stack-md": "16px",
+                      "container-margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "headline-xl": [
+                              "Montserrat"
+                      ],
+                      "headline-md": [
+                              "Montserrat"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Montserrat"
+                      ],
+                      "headline-lg": [
+                              "Montserrat"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-xl": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "34px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for dark mode */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #101415;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #313536;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #45464d;
+        }
+        
+        .ambient-shadow {
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+        
+        .glow-hover:hover {
+            box-shadow: 0 0 15px 0 rgba(205, 242, 0, 0.1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-sans selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopAppBar -->
+<header class="bg-background dark:bg-background text-secondary dark:text-secondary fixed top-0 w-full z-50 border-b border-outline-variant shadow-sm flex items-center justify-between px-container-margin-mobile md:px-container-margin-desktop h-20 transition-all duration-300" id="top-app-bar">
+<button aria-label="Menu" class="text-on-surface-variant hover:text-secondary-fixed transition-colors scale-95 active:duration-100 p-2" onclick="toggleDrawer()">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+<h1 class="font-headline-xl text-headline-xl text-secondary-fixed dark:text-secondary-fixed tracking-tighter">Velocore</h1>
+<button aria-label="Cotizar" class="font-label-md text-label-md text-on-surface-variant hover:text-secondary-fixed transition-colors scale-95 active:duration-100 p-2">
+            Cotizar
+        </button>
+</header>
+<!-- NavigationDrawer (Hidden by default) -->
+<div class="fixed inset-0 bg-black/60 z-[55] opacity-0 pointer-events-none transition-opacity duration-300" id="nav-drawer-overlay" onclick="toggleDrawer()"></div>
+<nav class="bg-surface-container dark:bg-surface-container text-secondary-fixed rounded-r-xl h-full w-80 shadow-xl fixed left-0 top-0 z-[60] -translate-x-full transition-transform duration-300 ease-in-out flex flex-col" id="nav-drawer">
+<div class="p-container-margin-mobile border-b border-surface-container-highest flex items-center justify-between">
+<h2 class="font-headline-md text-headline-md text-secondary-fixed">Velocore Menú</h2>
+<button class="text-on-surface-variant p-2 hover:bg-surface-variant rounded-full transition-colors" onclick="toggleDrawer()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<ul class="flex-1 py-stack-md overflow-y-auto space-y-2">
+<li>
+<a class="bg-secondary-container text-on-secondary-container rounded-lg mx-2 px-4 py-3 flex items-center gap-3 transition-all duration-200 ease-in-out font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">pedal_bike</span>
+                    Bicicletas
+                </a>
+</li>
+<li>
+<a class="text-on-surface-variant mx-2 px-4 py-3 flex items-center gap-3 hover:bg-surface-variant rounded-lg transition-all duration-200 ease-in-out font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">settings</span>
+                    Componentes
+                </a>
+</li>
+<li>
+<a class="text-on-surface-variant mx-2 px-4 py-3 flex items-center gap-3 hover:bg-surface-variant rounded-lg transition-all duration-200 ease-in-out font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">backpack</span>
+                    Accesorios
+                </a>
+</li>
+<li>
+<a class="text-on-surface-variant mx-2 px-4 py-3 flex items-center gap-3 hover:bg-surface-variant rounded-lg transition-all duration-200 ease-in-out font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">build</span>
+                    Taller
+                </a>
+</li>
+<li>
+<a class="text-on-surface-variant mx-2 px-4 py-3 flex items-center gap-3 hover:bg-surface-variant rounded-lg transition-all duration-200 ease-in-out font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">sell</span>
+                    Ofertas
+                </a>
+</li>
+</ul>
+</nav>
+<!-- Main Content -->
+<main class="flex-1 pt-24 pb-20 px-container-margin-mobile md:px-container-margin-desktop max-w-7xl mx-auto w-full flex flex-col md:flex-row gap-gutter">
+<!-- Mobile Search & Filter Bar -->
+<div class="md:hidden flex flex-col gap-unit mb-stack-md sticky top-20 z-40 bg-background/95 backdrop-blur py-2 -mx-container-margin-mobile px-container-margin-mobile border-b border-outline-variant/30">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-surface-container-high border border-transparent focus:border-secondary-fixed text-on-surface font-body-md text-body-md rounded-lg pl-10 pr-4 py-3 transition-colors outline-none placeholder:text-on-surface-variant" placeholder="Buscar productos..." type="text"/>
+</div>
+<button class="flex items-center justify-center gap-2 bg-surface-container border border-outline-variant/30 text-on-surface font-label-md text-label-md py-3 rounded-lg w-full active:scale-95 transition-transform" onclick="toggleFilters()">
+<span class="material-symbols-outlined">tune</span>
+                Filtros &amp; Ordenar
+            </button>
+</div>
+<!-- Sidebar Filters (Collapsible on Mobile, Fixed on Desktop) -->
+<aside class="fixed inset-0 z-[55] bg-surface-container/95 backdrop-blur-sm md:static md:bg-transparent md:backdrop-blur-none md:z-auto md:w-64 flex-shrink-0 transform translate-y-full md:translate-y-0 transition-transform duration-300 ease-in-out flex flex-col h-full md:h-auto overflow-hidden rounded-t-xl md:rounded-none" id="filters-sidebar">
+<div class="p-container-margin-mobile border-b border-outline-variant/30 flex justify-between items-center md:hidden">
+<h3 class="font-headline-md text-headline-md text-secondary-fixed">Filtros</h3>
+<button class="p-2 text-on-surface-variant hover:text-secondary-fixed rounded-full bg-surface-variant" onclick="toggleFilters()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex-1 overflow-y-auto p-container-margin-mobile md:p-0 space-y-stack-md pb-24 md:pb-0">
+<!-- Desktop Search (Hidden on Mobile) -->
+<div class="hidden md:block relative w-full mb-stack-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-surface-container-high border border-transparent focus:border-secondary-fixed text-on-surface font-body-md text-body-md rounded-lg pl-10 pr-4 py-2 transition-colors outline-none placeholder:text-on-surface-variant" placeholder="Buscar..." type="text"/>
+</div>
+<!-- Categoría Filter -->
+<div class="border-b border-outline-variant/20 pb-4">
+<h4 class="font-label-md text-label-md text-secondary-fixed mb-3 flex items-center justify-between cursor-pointer">
+                        Categoría <span class="material-symbols-outlined text-sm">expand_more</span>
+</h4>
+<div class="space-y-2">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input checked="" class="peer sr-only" type="checkbox"/>
+<div class="w-4 h-4 rounded border border-primary-container peer-checked:bg-secondary-fixed peer-checked:border-secondary-fixed flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[12px] text-background opacity-0 peer-checked:opacity-100 font-bold">check</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface transition-colors">Ruta</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="peer sr-only" type="checkbox"/>
+<div class="w-4 h-4 rounded border border-primary-container peer-checked:bg-secondary-fixed peer-checked:border-secondary-fixed flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[12px] text-background opacity-0 peer-checked:opacity-100 font-bold">check</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface transition-colors">MTB</span>
+</label>
+</div>
+</div>
+<!-- Precio Filter -->
+<div class="border-b border-outline-variant/20 pb-4">
+<h4 class="font-label-md text-label-md text-secondary-fixed mb-3">Precio Rango</h4>
+<div class="flex items-center gap-2">
+<input class="w-full bg-surface-container-high border border-transparent focus:border-secondary-fixed text-on-surface font-body-md text-body-md rounded-lg px-3 py-2 outline-none" placeholder="Min" type="number"/>
+<span class="text-on-surface-variant">-</span>
+<input class="w-full bg-surface-container-high border border-transparent focus:border-secondary-fixed text-on-surface font-body-md text-body-md rounded-lg px-3 py-2 outline-none" placeholder="Max" type="number"/>
+</div>
+</div>
+</div>
+<div class="p-container-margin-mobile border-t border-outline-variant/30 md:hidden bg-surface-container-highest">
+<button class="w-full bg-secondary-fixed text-background font-label-md text-label-md py-3 rounded-lg font-bold active:scale-95 transition-transform" onclick="toggleFilters()">Aplicar Filtros</button>
+</div>
+</aside>
+<!-- Product Grid Canvas -->
+<section class="flex-1">
+<div class="flex justify-between items-center mb-stack-md hidden md:flex">
+<h2 class="font-headline-md text-headline-md text-secondary">Bicicletas de Ruta <span class="text-on-surface-variant font-normal text-lg">(42)</span></h2>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ordenar por:</span>
+<select class="bg-surface-container border border-outline-variant/30 text-on-surface rounded-lg py-1 px-3 outline-none focus:border-secondary-fixed text-sm">
+<option>Recomendados</option>
+<option>Precio: Menor a Mayor</option>
+<option>Precio: Mayor a Menor</option>
+</select>
+</div>
+</div>
+<!-- Bento/Grid Layout for Products -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Product Card 1 (Featured/Large) -->
+<div class="col-span-1 sm:col-span-2 lg:col-span-2 row-span-2 bg-[#1d2122] rounded-xl border border-white/10 overflow-hidden relative group transition-all duration-300 hover:-translate-y-1 ambient-shadow glow-hover flex flex-col">
+<div class="absolute top-4 left-4 z-10 flex gap-2">
+<span class="bg-secondary-fixed text-background font-label-sm text-label-sm px-2 py-1 rounded-sm font-bold uppercase tracking-wider">Nuevo</span>
+</div>
+<button class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-secondary-fixed transition-colors border border-white/10">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<div class="relative h-64 sm:h-80 w-full overflow-hidden bg-surface-container-lowest">
+<!-- Placeholder for Hero Image -->
+<div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-700" data-alt="A sleek, high-performance carbon fiber road bike photographed in a moody, dark studio setting with intense lime green edge lighting highlighting its aerodynamic curves. The background is a deep, near-black void (#101415), emphasizing the technical luxury and speed of the machine." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCxMMj0JjnzbphaMz4P98Tto2MNnlEJ5RR6aqnez41MR6cg7O4r_ozILE8hkSe4QoVkXEv9IdBOUGjhMXxpM0nexOP-xVrC5MsfocKqQZg21B5tAJISPkq4hav_wKppeGhb8wEYFNujbXBJEiMcg808ImRYckpTyA4szL0EAG187ixAlOnlrjbBXnK2ZfoxJgdOfD5lMq0kUzUAQWOYC-pR6cZgCDRJvkbQ3w_TPJn40k2q4nxCcg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#1d2122] via-transparent to-transparent opacity-80"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-end">
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase tracking-widest">S-Works</p>
+<h3 class="font-headline-lg-mobile md:font-headline-lg text-secondary mb-2 leading-tight">Tarmac SL8 Pro</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">The ultimate race bike, combining aerodynamics, lightweight, and ride quality previously thought impossible.</p>
+<div class="flex items-end justify-between mt-auto">
+<div>
+<p class="font-headline-md text-secondary-fixed">$8,500.00</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant line-through">$9,200.00</p>
+</div>
+<button class="bg-transparent border-2 border-primary-container text-primary-container hover:bg-primary-container hover:text-background font-label-md text-label-md px-4 py-2 rounded-lg transition-colors font-bold">
+                                Ver Detalles
+                            </button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-[#1d2122] rounded-xl border border-white/10 overflow-hidden relative group transition-all duration-300 hover:-translate-y-1 ambient-shadow glow-hover flex flex-col h-full">
+<div class="absolute top-3 left-3 z-10 flex gap-2">
+<span class="bg-error text-on-error font-label-sm text-label-sm px-2 py-1 rounded-sm font-bold uppercase tracking-wider">-15%</span>
+</div>
+<button class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-secondary-fixed transition-colors border border-white/10">
+<span class="material-symbols-outlined text-sm">favorite</span>
+</button>
+<div class="relative h-48 w-full overflow-hidden bg-surface-container-highest p-4 flex items-center justify-center">
+<div class="bg-contain bg-center bg-no-repeat w-full h-full transform group-hover:scale-105 transition-transform duration-500" data-alt="A professional-grade gravel bicycle frame isolated against a dark charcoal grey textured background (#1d2122). Subtle ambient lighting reveals the matte finish and rugged geometry, designed for endurance and high performance. The image should feel technical and premium." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBroWmOaI4qxNKSQFPT4aAbsrgnSwkHUL1emSbaOtIAGuE_uS5AQ7U9_GNUDLP_oeZXG2ixEXm2p_7JC1U13VR8_2obfoKK5YU_kF4rFhG63BxoQIyeupZEmtJI5tXiW4j5ragNG1m5DkACUSzu7-jOlU2MJTVOVis7AR5OvrR32TOPF_LCdqsg08713gScA9KMwJ-blSlizpMMbRbl3p0OFIOJ2HcmWDQwH2UGr3C07Qd1nsB_9Q')"></div>
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase">Cervélo</p>
+<h3 class="font-label-md text-label-md text-secondary mb-2 line-clamp-2">Áspero GRX RX820</h3>
+<div class="mt-auto pt-4">
+<p class="font-headline-md text-secondary-fixed text-lg">$4,200.00</p>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-[#1d2122] rounded-xl border border-white/10 overflow-hidden relative group transition-all duration-300 hover:-translate-y-1 ambient-shadow glow-hover flex flex-col h-full">
+<button class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-secondary-fixed transition-colors border border-white/10">
+<span class="material-symbols-outlined text-sm">favorite</span>
+</button>
+<div class="relative h-48 w-full overflow-hidden bg-surface-container-highest p-4 flex items-center justify-center">
+<div class="bg-contain bg-center bg-no-repeat w-full h-full transform group-hover:scale-105 transition-transform duration-500" data-alt="A sleek aerodynamic cycling helmet displayed on a minimal dark pedestal. The lighting is dramatic, casting deep shadows while highlighting the ventilation ports and matte black texture. A faint hint of lime green (#cdf200) reflects off the visor area, emphasizing speed and modern SaaS-like technical precision." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCQEeQmN5G7brXUxku7MV7hbGkOqWCRh5PoLbXfRRPNehbVXtZPzyc5p0JS_LyMlLS1kUKuteEcXGtma6GwU7rOSSuikYXu_SC0RMZ6ra0yKOpd_kwdxFx12ESZYVIRUIwZcRgTYxYujMptEZyT6DCx2pwAFC37rdh1qeN-RNfdaZfKyuViaA6PlPpIvogOQX7ftc5nMofq8N0TkNiDiPs2-xZQbpuw6kcC2ak7WUcOofDkCIU79w')"></div>
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase">Giro</p>
+<h3 class="font-label-md text-label-md text-secondary mb-2 line-clamp-2">Eclipse Spherical</h3>
+<div class="mt-auto pt-4">
+<p class="font-headline-md text-secondary-fixed text-lg">$250.00</p>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-[#1d2122] rounded-xl border border-white/10 overflow-hidden relative group transition-all duration-300 hover:-translate-y-1 ambient-shadow glow-hover flex flex-col h-full">
+<div class="absolute top-3 left-3 z-10 flex gap-2">
+<span class="bg-secondary-fixed text-background font-label-sm text-label-sm px-2 py-1 rounded-sm font-bold uppercase tracking-wider">Top Ventas</span>
+</div>
+<button class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-secondary-fixed transition-colors border border-white/10">
+<span class="material-symbols-outlined text-sm">favorite</span>
+</button>
+<div class="relative h-48 w-full overflow-hidden bg-surface-container-highest p-4 flex items-center justify-center">
+<div class="bg-contain bg-center bg-no-repeat w-full h-full transform group-hover:scale-105 transition-transform duration-500" data-alt="A high-end precision bicycle power meter crankset floating in a dark, atmospheric void (#101415). Sharp, specular highlights catch the machined aluminum edges. The overall composition feels like a piece of advanced technology from a premium athletic brand, showcasing technical luxury." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDaH8-85pCPxfibGxItqd5L1HcvHGhpVPlfH0bIkYmtjjEBVMydvPhkgLPjjeTIE5WDDOJq2IYjS039x4uVistkX4Zpg9A_-EGp19OpyboSlnV7AFjSlehzvhg3UACcREAZl0r6bny6l6Ipufk2AmT0fYqRCe8fwaP2Y4iasK6upd9LIh7BdKxYE-w1nOfeFSBAFMAEDVJKrY3UwbCpGGZeIbJ1ngHT9RdgkXb5gmCLSCDQes4v3A')"></div>
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase">SRAM</p>
+<h3 class="font-label-md text-label-md text-secondary mb-2 line-clamp-2">Red AXS Power Meter</h3>
+<div class="mt-auto pt-4 flex justify-between items-center">
+<p class="font-headline-md text-secondary-fixed text-lg">$1,200.00</p>
+<button class="bg-surface-variant text-on-surface hover:bg-secondary-fixed hover:text-background w-8 h-8 rounded-full flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Load More -->
+<div class="mt-stack-lg flex justify-center">
+<button class="border-2 border-primary-container text-primary-container hover:bg-primary-container hover:text-background font-label-md text-label-md px-8 py-3 rounded-lg transition-colors font-bold active:scale-95">
+                    Cargar Más Productos
+                </button>
+</div>
+</section>
+</main>
+<!-- Floating WhatsApp Button -->
+<a aria-label="Contactar por WhatsApp" class="fixed bottom-24 md:bottom-8 right-4 md:right-8 z-40 bg-[#25D366] text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 ambient-shadow" href="#">
+<!-- SVG for WhatsApp since Material doesn't have brand icons natively -->
+<svg fill="currentColor" height="28" viewbox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+</svg>
+</a>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest text-secondary-fixed w-full border-t border-outline-variant flat no shadows grid grid-cols-2 md:grid-cols-4 gap-gutter px-container-margin-mobile md:px-container-margin-desktop py-stack-xl max-w-7xl mx-auto pb-32 md:pb-stack-xl">
+<div class="col-span-2 md:col-span-1">
+<h2 class="font-headline-md text-headline-md text-secondary-fixed mb-4">Velocore</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Expertos en alto rendimiento ciclista. Componentes y tecnología para superar tus límites.</p>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-secondary mb-3 uppercase tracking-wider">Catálogo</h3>
+<ul class="space-y-2">
+<li><a class="font-label-sm text-label-sm text-secondary-fixed underline opacity-80 hover:opacity-100 hover:text-secondary transition-colors" href="#">Bicicletas de Ruta</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary transition-colors" href="#">MTB</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary transition-colors" href="#">E-bikes</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-secondary mb-3 uppercase tracking-wider">Soporte</h3>
+<ul class="space-y-2">
+<li><a class="font-label-sm text-label-sm text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary transition-colors" href="#">Garantía</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary transition-colors" href="#">Envíos</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary transition-colors" href="#">Contacto</a></li>
+</ul>
+</div>
+<div class="col-span-2 md:col-span-4 mt-stack-md pt-stack-md border-t border-outline-variant/30 text-center">
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Velocore Perú. Expertos en alto rendimiento.</p>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="bg-surface-container dark:bg-surface-container text-secondary-fixed font-label-sm text-label-sm hidden fixed bottom-0 w-full md:hidden z-50 bg-surface-container border-t border-outline-variant shadow-lg flex justify-around items-center py-2 px-4 !flex">
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-variant scale-110 duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="text-[10px]">Inicio</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full p-2 scale-110 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">search</span>
+<span class="text-[10px] font-bold">Explorar</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-variant scale-110 duration-200 rounded-lg relative" href="#">
+<span class="material-symbols-outlined mb-1">shopping_cart</span>
+<span class="text-[10px]">Carrito</span>
+<span class="absolute top-1 right-2 w-2 h-2 bg-error rounded-full"></span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-variant scale-110 duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined mb-1">chat</span>
+<span class="text-[10px]">Soporte</span>
+</a>
+</nav>
+<script>
+        // Drawer toggle logic
+        function toggleDrawer() {
+            const drawer = document.getElementById('nav-drawer');
+            const overlay = document.getElementById('nav-drawer-overlay');
+            
+            if (drawer.classList.contains('-translate-x-full')) {
+                // Open
+                drawer.classList.remove('-translate-x-full');
+                overlay.classList.remove('opacity-0', 'pointer-events-none');
+                overlay.classList.add('opacity-100');
+                document.body.style.overflow = 'hidden';
+            } else {
+                // Close
+                drawer.classList.add('-translate-x-full');
+                overlay.classList.remove('opacity-100');
+                overlay.classList.add('opacity-0', 'pointer-events-none');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Mobile Filters toggle logic
+        function toggleFilters() {
+            const sidebar = document.getElementById('filters-sidebar');
+            
+            if (window.innerWidth < 768) { // Only run logic on mobile
+                if (sidebar.classList.contains('translate-y-full')) {
+                    // Open
+                    sidebar.classList.remove('translate-y-full');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    // Close
+                    sidebar.classList.add('translate-y-full');
+                    document.body.style.overflow = '';
+                }
+            }
+        }
+
+        // Hide app bar on scroll down, show on scroll up
+        let lastScroll = 0;
+        const appBar = document.getElementById('top-app-bar');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll <= 0) {
+                appBar.classList.remove('-translate-y-full');
+                return;
+            }
+            
+            if (currentScroll > lastScroll && !appBar.classList.contains('-translate-y-full')) {
+                // Scroll Down
+                appBar.classList.add('-translate-y-full');
+            } else if (currentScroll < lastScroll && appBar.classList.contains('-translate-y-full')) {
+                // Scroll Up
+                appBar.classList.remove('-translate-y-full');
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
+</body></html>

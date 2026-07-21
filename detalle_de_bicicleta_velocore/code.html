@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Velocore - Ficha de Producto</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Hide scrollbar for horizontal scrolling */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-background": "#e0e3e4",
+                      "on-tertiary-fixed-variant": "#42484a",
+                      "on-surface": "#e0e3e4",
+                      "on-error-container": "#ffdad6",
+                      "error-container": "#93000a",
+                      "secondary": "#ffffff",
+                      "inverse-surface": "#e0e3e4",
+                      "inverse-on-surface": "#2d3132",
+                      "on-tertiary": "#2b3133",
+                      "surface-variant": "#313536",
+                      "on-secondary-fixed-variant": "#3f4c00",
+                      "background": "#101415",
+                      "tertiary-fixed-dim": "#c2c7ca",
+                      "primary-container": "#bec6e0",
+                      "outline": "#909097",
+                      "inverse-primary": "#565e74",
+                      "surface-container-highest": "#313536",
+                      "on-secondary-container": "#5a6c00",
+                      "tertiary-fixed": "#dee3e6",
+                      "on-primary-fixed-variant": "#3e465c",
+                      "surface-dim": "#101415",
+                      "secondary-container": "#cdf200",
+                      "on-tertiary-fixed": "#171d1e",
+                      "on-primary-fixed": "#131b2e",
+                      "surface-bright": "#363a3b",
+                      "surface-container-lowest": "#0b0f10",
+                      "error": "#ffb4ab",
+                      "outline-variant": "#45464d",
+                      "surface-container": "#1c2021",
+                      "primary-fixed": "#dae2fd",
+                      "secondary-fixed-dim": "#b3d400",
+                      "on-secondary-fixed": "#181e00",
+                      "surface": "#101415",
+                      "on-surface-variant": "#c6c6cd",
+                      "on-tertiary-container": "#4d5355",
+                      "on-error": "#690005",
+                      "secondary-fixed": "#cdf200",
+                      "surface-container-low": "#181c1d",
+                      "on-secondary": "#2b3400",
+                      "surface-tint": "#bec6e0",
+                      "on-primary-container": "#4a5268",
+                      "primary": "#dae2fd",
+                      "surface-container-high": "#272b2c",
+                      "tertiary": "#dee3e6",
+                      "primary-fixed-dim": "#bec6e0",
+                      "on-primary": "#283044",
+                      "tertiary-container": "#c1c7ca"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "16px",
+                      "stack-lg": "32px",
+                      "stack-xl": "64px",
+                      "unit": "8px",
+                      "container-margin-desktop": "48px",
+                      "stack-sm": "8px",
+                      "stack-md": "16px",
+                      "container-margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "headline-xl": [
+                              "Montserrat"
+                      ],
+                      "headline-md": [
+                              "Montserrat"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Montserrat"
+                      ],
+                      "headline-lg": [
+                              "Montserrat"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-xl": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "34px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background antialiased min-h-screen pb-[100px] flex justify-center">
+<main class="w-full max-w-[480px] relative bg-background shadow-2xl">
+<!-- Contextual Header (Overrides TopAppBar for task focus) -->
+<header class="fixed top-0 w-full max-w-[480px] z-50 flex items-center justify-between px-4 h-16 bg-gradient-to-b from-background/90 to-transparent backdrop-blur-sm">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container/50 text-on-surface backdrop-blur-md active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<div class="flex gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container/50 text-on-surface backdrop-blur-md active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="favorite_border">favorite_border</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container/50 text-on-surface backdrop-blur-md active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+</div>
+</header>
+<!-- Product Image Gallery -->
+<section class="relative w-full aspect-[4/5] bg-surface-container-highest">
+<div class="flex w-full h-full overflow-x-auto snap-x snap-mandatory no-scrollbar">
+<div class="w-full h-full flex-shrink-0 snap-center relative">
+<img class="w-full h-full object-cover" data-alt="A sleek, high-performance mountain bike in a dramatic studio setting. The frame is matte black with vibrant lime green accents reflecting the technical luxury aesthetic. Hard, high-contrast directional lighting highlights the texture of the carbon fiber frame and aggressive tires against a deep black background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz9D_wBAR0frWve_koKkXcFfiNbUApk-jmqcpKJ7dmDHE9DdSFST9zS15WtCFmVuhdi-aaixRPfOS9zohyL7L41h4YzSd0qbku6P8b9ex1NjZOKsNQwRzVt_6T7rdl0VnzAiB_eUJT0lFsLgf2QM-B0kBxdb--3SlmB5UcggNcOdVDiObE7ufJ7EipdW-qRNlPaxmYGLNe82nDZ6F7KzyDtFU-T75d5ra8R_b6f-Y6g8hpXc3kGw"/>
+</div>
+<div class="w-full h-full flex-shrink-0 snap-center relative">
+<img class="w-full h-full object-cover" data-alt="Close up detail shot of the mountain bike's rear derailleur and cassette. The precision engineering is emphasized by sharp focus and macro photography. The metallic surfaces gleam under subtle, cool-toned lighting, contrasting beautifully with the deep shadow environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl5099QV1NdUiwEVe_wn_l4F5QXl6_S-Tn8Bvw_CGsE-FKSRjIv_0FWUaEDQbLDRWVEpe6sUhgeQt0eD_mVkFg9xwbN8uwlqrQtVM8dqyoj7Og-NIvd5ovaK0JqyjIin4EnZllRzyVPmdH9JyLvMTYLCN-eWUf3jFL6FUD5aJoDgWZiRDgB3v2T-uBLF1bUJAFkxC6CFypXjApAr5pv-VfouAbu-gtiB6q59X3xXcqJ7-DXrixnA"/>
+</div>
+<div class="w-full h-full flex-shrink-0 snap-center relative">
+<img class="w-full h-full object-cover" data-alt="Front view of the mountain bike's suspension fork and handlebars, shot from a low, imposing angle. The bold design language of the technical sports brand is evident. Moody, cinematic lighting cuts through a subtle haze, creating an aura of speed and capability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwPSru4G81K9erA3ErVPbqD_7rv4s-QletRZTV_jW7su_xDrWiCntAumW07YGQDOobqqRmnES7sjoG0ncuTkKdUwyQXVNTzH7V2esGY9PjlVsc9b4JBTYaowcCEOCa_LFCMm0wmp_6lDrd6SFWxiZjgYnBhvItAPdbgIZuCWdERSixJZK8soJtUSVVSAwZbGgepvQHh68uzx18JPNPfMXN2aphjuUI1bS5XIWwhNgS7Gipdq2uyQ"/>
+</div>
+</div>
+<!-- Pagination Dots -->
+<div class="absolute bottom-4 left-0 w-full flex justify-center gap-2">
+<div class="w-2 h-2 rounded-full bg-secondary-fixed"></div>
+<div class="w-2 h-2 rounded-full bg-on-surface-variant/40"></div>
+<div class="w-2 h-2 rounded-full bg-on-surface-variant/40"></div>
+</div>
+</section>
+<!-- Product Information -->
+<section class="px-container-margin-mobile pt-stack-md pb-stack-lg flex flex-col gap-unit">
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-surface-container-high text-on-surface-variant font-label-sm px-2 py-1 rounded-md border border-outline-variant/30 uppercase tracking-wider">MTB Pro Series</span>
+<span class="flex items-center text-secondary-fixed font-label-sm gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="star" data-weight="fill">star</span>
+                    4.9 (128)
+                </span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-background leading-tight">
+                Velocore Apex Carbon 29"
+            </h1>
+<div class="flex items-end gap-3 mt-2">
+<span class="font-headline-xl text-headline-xl text-secondary-fixed tracking-tight">S/ 12,499</span>
+<span class="font-body-md text-body-md text-on-surface-variant line-through mb-1">S/ 14,999</span>
+</div>
+<div class="bg-surface-container rounded-lg p-3 mt-2 border border-secondary-fixed/20 flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-fixed" data-icon="credit_card">credit_card</span>
+<p class="font-label-md text-label-md text-on-surface">Hasta 12 cuotas sin intereses de S/ 1,041.58</p>
+</div>
+</section>
+<!-- Selectors -->
+<section class="px-container-margin-mobile pb-stack-lg flex flex-col gap-stack-md">
+<!-- Color Selector -->
+<div>
+<div class="flex justify-between items-center mb-3">
+<h3 class="font-label-md text-label-md text-on-surface">Color: <span class="text-on-surface-variant font-normal">Matte Carbon / Lime</span></h3>
+</div>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full border-2 border-secondary-fixed p-1 flex items-center justify-center transition-transform active:scale-95">
+<span class="w-full h-full rounded-full bg-[#111] border border-white/10 block relative overflow-hidden">
+<span class="absolute top-0 right-0 w-1/2 h-full bg-[#cdf200]"></span>
+</span>
+</button>
+<button class="w-12 h-12 rounded-full border-2 border-transparent p-1 flex items-center justify-center transition-transform active:scale-95">
+<span class="w-full h-full rounded-full bg-[#2a2a2a] border border-white/10 block relative overflow-hidden">
+<span class="absolute top-0 right-0 w-1/2 h-full bg-[#ff3b3b]"></span>
+</span>
+</button>
+<button class="w-12 h-12 rounded-full border-2 border-transparent p-1 flex items-center justify-center transition-transform active:scale-95">
+<span class="w-full h-full rounded-full bg-[#e0e3e4] border border-white/10 block"></span>
+</button>
+</div>
+</div>
+<!-- Size Selector -->
+<div>
+<div class="flex justify-between items-center mb-3">
+<h3 class="font-label-md text-label-md text-on-surface">Talla:</h3>
+<a class="font-label-sm text-label-sm text-primary underline" href="#">Guía de tallas</a>
+</div>
+<div class="grid grid-cols-4 gap-3">
+<button class="py-3 rounded-lg border border-outline-variant bg-surface-container text-on-surface font-label-md text-label-md text-center active:scale-95 transition-all">S</button>
+<button class="py-3 rounded-lg border-2 border-secondary-fixed bg-secondary-container/10 text-secondary-fixed font-label-md text-label-md text-center active:scale-95 transition-all">M</button>
+<button class="py-3 rounded-lg border border-outline-variant bg-surface-container text-on-surface font-label-md text-label-md text-center active:scale-95 transition-all">L</button>
+<button class="py-3 rounded-lg border border-outline-variant bg-surface-container/30 text-on-surface-variant font-label-md text-label-md text-center opacity-50 cursor-not-allowed">XL</button>
+</div>
+<p class="font-label-sm text-label-sm text-secondary-fixed mt-3 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="check_circle">check_circle</span>
+                    Stock disponible (3 unidades)
+                </p>
+</div>
+</section>
+<!-- Technical Specs -->
+<section class="px-container-margin-mobile pb-stack-lg">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Especificaciones Técnicas</h3>
+<div class="bg-surface-container rounded-xl overflow-hidden border border-outline-variant/50">
+<div class="grid grid-cols-3 border-b border-outline-variant/30">
+<div class="p-3 bg-surface-container-high font-label-sm text-on-surface-variant">Cuadro</div>
+<div class="p-3 col-span-2 font-body-md text-on-surface text-sm">Carbono OMR 29", boost 12x148</div>
+</div>
+<div class="grid grid-cols-3 border-b border-outline-variant/30">
+<div class="p-3 bg-surface-container-high font-label-sm text-on-surface-variant">Horquilla</div>
+<div class="p-3 col-span-2 font-body-md text-on-surface text-sm">Fox 34 Float SC Factory 100 FIT4</div>
+</div>
+<div class="grid grid-cols-3 border-b border-outline-variant/30">
+<div class="p-3 bg-surface-container-high font-label-sm text-on-surface-variant">Frenos</div>
+<div class="p-3 col-span-2 font-body-md text-on-surface text-sm">Shimano XT M8100 Hydraulic Disc</div>
+</div>
+<div class="grid grid-cols-3">
+<div class="p-3 bg-surface-container-high font-label-sm text-on-surface-variant">Transmisión</div>
+<div class="p-3 col-span-2 font-body-md text-on-surface text-sm">Shimano XT M8100 SGS Shadow Plus</div>
+</div>
+</div>
+</section>
+<!-- Related Products -->
+<section class="pl-container-margin-mobile pb-stack-xl">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4 pr-container-margin-mobile">Completa tu equipo</h3>
+<div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 no-scrollbar pr-4">
+<div class="w-[180px] flex-shrink-0 snap-start bg-surface-container rounded-xl overflow-hidden border border-outline-variant/30 shadow-sm relative group">
+<div class="absolute top-2 right-2 z-10 w-8 h-8 rounded-full bg-background/60 backdrop-blur-md flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px] text-on-surface" data-icon="favorite_border">favorite_border</span>
+</div>
+<div class="h-[140px] bg-surface-container-highest relative">
+<img class="w-full h-full object-cover" data-alt="A high-end aerodynamic cycling helmet in matte black, placed on a dark grey surface. Subtle studio lighting catches the sleek curves and ventilation ports. The aesthetic is modern, fast, and technically sophisticated, perfectly matching the dark luxury brand vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTKYs06ID0jCrSGp9wvimsGwGgeHbIVU2zkYd_HamUhP_mHOsqGzWYADRMrydKzZC4ZLO5QGVTdqNBQzGLOPIUyb6s8lAMSxDG_Zfxrqfw5tWzikVKghT0rSUEHVqejElfH1h7jS6Sc-nxx963zCOUbih97cGIuUq8_o3fkE6kTB3Z98L6fkraruOdKuc_9w3uRTIYA9uMCLnZdOgSLqoL-AIWRIV6xi-jOtbroF8dPZ6RcrLhTQ"/>
+</div>
+<div class="p-3">
+<h4 class="font-label-md text-label-md text-on-surface line-clamp-2 mb-2">Casco Velocore Aero Pro</h4>
+<p class="font-label-md text-label-md text-secondary-fixed">S/ 450.00</p>
+</div>
+</div>
+<div class="w-[180px] flex-shrink-0 snap-start bg-surface-container rounded-xl overflow-hidden border border-outline-variant/30 shadow-sm relative group">
+<div class="absolute top-2 right-2 z-10 w-8 h-8 rounded-full bg-background/60 backdrop-blur-md flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px] text-on-surface" data-icon="favorite_border">favorite_border</span>
+</div>
+<div class="h-[140px] bg-surface-container-highest relative">
+<img class="w-full h-full object-cover" data-alt="A pair of premium cycling sunglasses with mirrored iridescent lenses, resting on a textured dark slate background. The frame is aggressive and angular. Strategic lighting highlights the lens reflections against the moody, low-key environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp_dNLVM-74WhXFSfUeqgrjnQpmiUNw86R2IM8EbZmKbDMhDWS3SLIXvcJBwTWRHZKV0_dzApUQpK_DyIrTTJL-BHUOfInR4kIv28TXjVi1p6jBy-9HySOOm44XagHPpcluVAudt71ZvLomaHCpxZbScx9rq3t8hmIxokDgeDZYJHvWWX9K0U28IjdQuye_--F2VT69bN6INaOENP_agc-HZbJgDyX9WIES8AaVzJYEB92kW9X4A"/>
+</div>
+<div class="p-3">
+<h4 class="font-label-md text-label-md text-on-surface line-clamp-2 mb-2">Lentes Fotocromáticos VZ1</h4>
+<p class="font-label-md text-label-md text-secondary-fixed">S/ 320.00</p>
+</div>
+</div>
+<div class="w-[180px] flex-shrink-0 snap-start bg-surface-container rounded-xl overflow-hidden border border-outline-variant/30 shadow-sm relative group">
+<div class="absolute top-2 right-2 z-10 w-8 h-8 rounded-full bg-background/60 backdrop-blur-md flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px] text-on-surface" data-icon="favorite_border">favorite_border</span>
+</div>
+<div class="h-[140px] bg-surface-container-highest relative">
+<img class="w-full h-full object-cover" data-alt="A close up of technical cycling gloves in dark grey with bright lime green accents. The textured fabric and protective padding are visible. Dramatic side lighting emphasizes the technical materials in a sleek, dark aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbdWhFkNrxIoRYET5b56yXGHpHBbBJhBQV0L-FiSPogWWSRw_Dj08lvY-6N1Tl0KTaMAo-4XQCE8VRFimrgTykDA6nvFUZaJQl7zq1BKh_kDRGE4L_OfdJDV4AGwUmo0SQk8eWnqv-Jn4y69USqDKsCCTkvx4Y_aZuvw4X2an5sPJEWGk8OAJ_PGXbRfOr8SDlsBhU1uk1cmSNSOvkNd-nJQ3lhD3veelA-lyYXa3zc_Z3BsVA_A"/>
+</div>
+<div class="p-3">
+<h4 class="font-label-md text-label-md text-on-surface line-clamp-2 mb-2">Guantes MTB Grip Tech</h4>
+<p class="font-label-md text-label-md text-secondary-fixed">S/ 120.00</p>
+</div>
+</div>
+</div>
+</section>
+<!-- WhatsApp FAB -->
+<a class="fixed bottom-[110px] right-4 z-40 w-14 h-14 bg-secondary-fixed rounded-full shadow-[0_4px_20px_rgba(205,242,0,0.3)] flex items-center justify-center hover:scale-105 active:scale-95 transition-transform" href="#">
+<svg class="w-8 h-8 text-[#101415] fill-current" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+</svg>
+</a>
+<!-- Sticky Bottom Actions -->
+<div class="fixed bottom-0 w-full max-w-[480px] bg-surface-container-high/95 backdrop-blur-md border-t border-outline-variant/30 p-4 z-50 shadow-[0_-10px_40px_rgba(0,0,0,0.5)]">
+<div class="flex gap-3">
+<button class="flex-1 bg-primary-container text-on-primary-container font-label-md text-label-md rounded-full py-3.5 flex items-center justify-center gap-2 active:scale-95 transition-transform shadow-md">
+<span class="material-symbols-outlined" data-icon="add_shopping_cart">add_shopping_cart</span>
+                    Agregar al Carrito
+                </button>
+<button class="flex-1 bg-secondary-container text-on-secondary-container font-label-md text-label-md rounded-full py-3.5 font-bold flex items-center justify-center active:scale-95 transition-transform shadow-[0_0_15px_rgba(205,242,0,0.2)]">
+                    Comprar ahora
+                </button>
+</div>
+</div>
+</main>
+</body></html>

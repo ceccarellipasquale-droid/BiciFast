@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Velocore - Domina cada terreno</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-background": "#e0e3e4",
+                      "on-tertiary-fixed-variant": "#42484a",
+                      "on-surface": "#e0e3e4",
+                      "on-error-container": "#ffdad6",
+                      "error-container": "#93000a",
+                      "secondary": "#ffffff",
+                      "inverse-surface": "#e0e3e4",
+                      "inverse-on-surface": "#2d3132",
+                      "on-tertiary": "#2b3133",
+                      "surface-variant": "#313536",
+                      "on-secondary-fixed-variant": "#3f4c00",
+                      "background": "#101415",
+                      "tertiary-fixed-dim": "#c2c7ca",
+                      "primary-container": "#bec6e0",
+                      "outline": "#909097",
+                      "inverse-primary": "#565e74",
+                      "surface-container-highest": "#313536",
+                      "on-secondary-container": "#5a6c00",
+                      "tertiary-fixed": "#dee3e6",
+                      "on-primary-fixed-variant": "#3e465c",
+                      "surface-dim": "#101415",
+                      "secondary-container": "#cdf200",
+                      "on-tertiary-fixed": "#171d1e",
+                      "on-primary-fixed": "#131b2e",
+                      "surface-bright": "#363a3b",
+                      "surface-container-lowest": "#0b0f10",
+                      "error": "#ffb4ab",
+                      "outline-variant": "#45464d",
+                      "surface-container": "#1c2021",
+                      "primary-fixed": "#dae2fd",
+                      "secondary-fixed-dim": "#b3d400",
+                      "on-secondary-fixed": "#181e00",
+                      "surface": "#101415",
+                      "on-surface-variant": "#c6c6cd",
+                      "on-tertiary-container": "#4d5355",
+                      "on-error": "#690005",
+                      "secondary-fixed": "#cdf200",
+                      "surface-container-low": "#181c1d",
+                      "on-secondary": "#2b3400",
+                      "surface-tint": "#bec6e0",
+                      "on-primary-container": "#4a5268",
+                      "primary": "#dae2fd",
+                      "surface-container-high": "#272b2c",
+                      "tertiary": "#dee3e6",
+                      "primary-fixed-dim": "#bec6e0",
+                      "on-primary": "#283044",
+                      "tertiary-container": "#c1c7ca"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "16px",
+                      "stack-lg": "32px",
+                      "stack-xl": "64px",
+                      "unit": "8px",
+                      "container-margin-desktop": "48px",
+                      "stack-sm": "8px",
+                      "stack-md": "16px",
+                      "container-margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "headline-xl": [
+                              "Montserrat"
+                      ],
+                      "headline-md": [
+                              "Montserrat"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Montserrat"
+                      ],
+                      "headline-lg": [
+                              "Montserrat"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-xl": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "34px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+            },
+          }
+        }
+    </script>
+<style>
+        body {
+            background-color: #101415;
+            color: #e0e3e4;
+        }
+        /* Custom scrollbar for dark mode */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #101415;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #313536;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #45464d;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- 1. Barra de anuncios -->
+<div class="bg-surface-container-high text-on-surface py-2 px-4 text-center font-label-sm text-label-sm w-full z-50 fixed top-0 left-0 right-0">
+        Envío gratis en Lima desde S/300 · Hasta 12 cuotas · Yape y Plin
+    </div>
+<!-- 2. Header (TopAppBar) -->
+<header class="bg-background dark:bg-background fixed top-8 w-full z-50 border-b border-outline-variant shadow-sm transition-transform duration-300" id="mainHeader">
+<div class="flex items-center justify-between px-container-margin-mobile md:px-container-margin-desktop h-20 max-w-7xl mx-auto">
+<!-- Leading: Mobile Menu Toggle / Desktop Brand -->
+<div class="flex items-center gap-4">
+<button aria-label="Open menu" class="md:hidden text-secondary dark:text-secondary scale-95 active:duration-100 hover:text-secondary-fixed transition-colors" onclick="document.getElementById('mobileDrawer').classList.remove('-translate-x-full')">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+<a class="font-headline-xl text-headline-xl text-secondary-fixed dark:text-secondary-fixed tracking-tighter" href="index.html">Velocore</a>
+</div>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex items-center gap-8 font-label-md text-label-md">
+<a class="text-secondary-fixed font-bold hover:text-secondary-fixed transition-colors" href="catalogo.html">Bicicletas</a>
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="catalogo.html?cat=componentes">Componentes</a>
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="catalogo.html?cat=accesorios">Accesorios</a>
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="#">Taller</a>
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors" href="#">Ofertas</a>
+</nav>
+<!-- Trailing: Actions -->
+<div class="flex items-center gap-4">
+<button aria-label="Search" class="hidden md:flex text-on-surface-variant hover:text-secondary-fixed transition-colors">
+<span class="material-symbols-outlined text-2xl">search</span>
+</button>
+<a aria-label="Cart" class="text-on-surface-variant hover:text-secondary-fixed transition-colors relative" href="carrito.html">
+<span class="material-symbols-outlined text-2xl">shopping_cart</span>
+<span class="absolute -top-1 -right-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center" data-cart-count="">0</span>
+</a>
+<!-- Cotizar / WhatsApp Button -->
+<button class="hidden md:flex items-center gap-2 bg-secondary-container text-background font-label-md text-label-md px-6 py-2.5 rounded-full hover:scale-95 transition-transform duration-200 hover:shadow-[0_0_15px_rgba(205,242,0,0.4)]">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">chat</span>
+                    Cotizar
+                </button>
+</div>
+</div>
+</header>
+<!-- NavigationDrawer (Mobile) -->
+<div class="bg-surface-container dark:bg-surface-container rounded-r-xl h-full w-80 shadow-xl fixed left-0 top-0 z-[60] -translate-x-full transition-transform duration-300 ease-in-out border-r border-outline-variant" id="mobileDrawer">
+<div class="p-4 flex justify-between items-center border-b border-surface-container-high">
+<span class="font-headline-md text-headline-md text-secondary-fixed">Velocore Menú</span>
+<button class="text-on-surface-variant hover:text-secondary-fixed" onclick="document.getElementById('mobileDrawer').classList.add('-translate-x-full')">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-2 mt-4 font-label-md text-label-md">
+<a class="bg-secondary-container text-on-secondary-container rounded-lg mx-2 px-4 py-3 flex items-center gap-3" href="catalogo.html">
+<span class="material-symbols-outlined">pedal_bike</span>
+                Bicicletas
+            </a>
+<a class="text-on-surface-variant mx-2 px-4 py-3 flex items-center gap-3 hover:bg-surface-variant rounded-lg transition-colors" href="catalogo.html?cat=componentes">
+<span class="material-symbols-outlined">settings</span>
+                Componentes
+            </a>
+<a class="text-on-surface-variant mx-2 px-4 py-3 flex items-center gap-3 hover:bg-surface-variant rounded-lg transition-colors" href="catalogo.html?cat=accesorios">
+<span class="material-symbols-outlined">backpack</span>
+                Accesorios
+            </a>
+<a class="text-on-surface-variant mx-2 px-4 py-3 flex items-center gap-3 hover:bg-surface-variant rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">build</span>
+                Taller
+            </a>
+<a class="text-on-surface-variant mx-2 px-4 py-3 flex items-center gap-3 hover:bg-surface-variant rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">sell</span>
+                Ofertas
+            </a>
+</nav>
+</div>
+<!-- Overlay for Drawer -->
+<div class="fixed inset-0 bg-black/50 z-[55] hidden" id="drawerOverlay" onclick="document.getElementById('mobileDrawer').classList.add('-translate-x-full')"></div>
+<main class="pt-28 md:pt-32 pb-24 md:pb-0">
+<!-- 3. Hero Section -->
+<section class="relative w-full min-h-[707px] flex items-center justify-center overflow-hidden">
+<!-- Background Image -->
+<div class="absolute inset-0 bg-cover bg-center w-full h-full opacity-60" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAgw9ZYP-XWoVjbY6ATne_Oylt1WOH_SrlcteexcqVeJgkAPSAUt7o-FAB80-CQJ7L-3PyoYimp3IdyEGkzMFjc0ygy8npTvl-6rpq6PEBxcl8Lo3bSdpP72sSdMJga5LD2Q25TG7KY1_G11Eo9y8065jb_Gt_bRULvD6MzCDZP_1g3YWYzIHyqZps5s10FJORWuifyrVW015kfhuhOl6O3aX2st0L9mERoROoPAqr6TMakSJcT4g')"></div>
+<!-- Overlay Gradient -->
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/50 to-transparent"></div>
+<div class="relative z-10 w-full max-w-7xl mx-auto px-container-margin-mobile md:px-container-margin-desktop flex flex-col items-start gap-stack-lg">
+<div class="max-w-2xl space-y-4">
+<h1 class="font-headline-lg-mobile md:font-headline-xl text-headline-lg-mobile md:text-headline-xl text-secondary font-extrabold leading-tight tracking-tighter">
+                        Domina cada terreno <br/><span class="text-secondary-fixed">con precisión</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Bicicletas de alto rendimiento para expertos y entusiastas. Diseñadas para la velocidad, construidas para resistir.
+                    </p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+<a class="bg-secondary-container text-background font-label-md text-label-md px-8 py-4 rounded-full hover:scale-95 transition-transform duration-200 shadow-[0_0_20px_rgba(205,242,0,0.3)] hover:shadow-[0_0_30px_rgba(205,242,0,0.5)] flex items-center justify-center gap-2" href="catalogo.html">
+                        Ver bicicletas
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+<button class="border-2 border-primary-container text-primary-container bg-transparent font-label-md text-label-md px-8 py-4 rounded-full hover:bg-primary-container/10 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">chat</span>
+                        Cotizar WhatsApp
+                    </button>
+</div>
+<!-- Trust Icons Grid (Bento style sub-section) -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 w-full border-t border-outline-variant/30 pt-8">
+<div class="flex items-center gap-3 bg-surface-container-low p-3 rounded-lg border border-outline-variant/20 backdrop-blur-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-2xl">verified</span>
+<span class="font-label-sm text-label-sm text-on-surface">Garantía oficial</span>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-low p-3 rounded-lg border border-outline-variant/20 backdrop-blur-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-2xl">local_shipping</span>
+<span class="font-label-sm text-label-sm text-on-surface">Envío a todo Perú</span>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-low p-3 rounded-lg border border-outline-variant/20 backdrop-blur-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-2xl">lock</span>
+<span class="font-label-sm text-label-sm text-on-surface">Pago Seguro</span>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-low p-3 rounded-lg border border-outline-variant/20 backdrop-blur-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-2xl">build</span>
+<span class="font-label-sm text-label-sm text-on-surface">Taller Propio</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Categorías (Grilla clara y uniforme) -->
+<section class="py-stack-xl px-container-margin-mobile md:px-container-margin-desktop max-w-7xl mx-auto">
+<div class="mb-stack-lg text-center md:text-left">
+<h2 class="font-headline-md text-headline-md text-secondary">Elige tu categoría</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Encuentra tu bicicleta ideal en 2 clics: elige el tipo y mira el catálogo completo.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<!-- Montañeras / MTB -->
+<a class="group relative rounded-xl overflow-hidden bg-surface-container border border-outline-variant/30 hover:border-secondary-fixed/60 transition-colors flex flex-col" href="catalogo.html?cat=mtb">
+<div class="relative h-32 md:h-40 w-full overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAySx0wCmMM5258rMRtSCGNWZI3QboG50xkD3D6Jj8Fs8z4AWM2py7qJkkQlqO3RbuVN9PCFSob-ZPynjM50vs-jpKDYZMogghx6SbJDTugzIknOBKrGRXQrz3BiMoOB2i3NeC3yp8q0eyAbQN7M3is0jCGxQ-GEIXiKhpo_rqTs1KApW6v5lsmh1vsigjpjm_QR6CtYMklaOlTJVvXecV3QPz_ygJQfuht2id0YI6llSLBhYvAhw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+</div>
+<div class="p-4 flex flex-col items-start gap-1">
+<h3 class="font-label-md text-label-md text-secondary">Montañeras</h3>
+<span class="font-label-sm text-label-sm text-secondary-fixed flex items-center gap-1 group-hover:gap-2 transition-all">Ver catálogo <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+</div>
+</a>
+<!-- Ruta / Gravel -->
+<a class="group relative rounded-xl overflow-hidden bg-surface-container border border-outline-variant/30 hover:border-secondary-fixed/60 transition-colors flex flex-col" href="catalogo.html?cat=ruta">
+<div class="relative h-32 md:h-40 w-full overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl0HZBH_XAA8fgzo7g14rz9NBBiP5aFvhZq4SWspdT0qOdkHQSyqdgIeHekFpX2sIR_5Bs33Nua1_yIJ0B5hUcIJR07absw2DN_pxgBQBAuCxJp-F4tZbv0FmCw5FTB57gnQIYnVSy0tANQ8D6cH15bi-DsCSP80MxvRcThjcqr9LwiFfo5YTHcqrEY95g6YwjGU0lsgcxAVmrXL-BqiLtBsujwiKYNRDoWlEhGyu66pFJRQT5sg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+</div>
+<div class="p-4 flex flex-col items-start gap-1">
+<h3 class="font-label-md text-label-md text-secondary">Ruta / Gravel</h3>
+<span class="font-label-sm text-label-sm text-secondary-fixed flex items-center gap-1 group-hover:gap-2 transition-all">Ver catálogo <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+</div>
+</a>
+<!-- Urbanas -->
+<a class="group relative rounded-xl overflow-hidden bg-surface-container border border-outline-variant/30 hover:border-secondary-fixed/60 transition-colors flex flex-col" href="catalogo.html?cat=urbana">
+<div class="relative h-32 md:h-40 w-full overflow-hidden bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary-fixed transition-colors text-5xl">location_city</span>
+</div>
+<div class="p-4 flex flex-col items-start gap-1">
+<h3 class="font-label-md text-label-md text-secondary">Urbanas</h3>
+<span class="font-label-sm text-label-sm text-secondary-fixed flex items-center gap-1 group-hover:gap-2 transition-all">Ver catálogo <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+</div>
+</a>
+<!-- Eléctricas -->
+<a class="group relative rounded-xl overflow-hidden bg-surface-container border border-outline-variant/30 hover:border-secondary-fixed/60 transition-colors flex flex-col" href="catalogo.html?cat=electrica">
+<div class="relative h-32 md:h-40 w-full overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXkP-hYFNvueSrBjdpcvkj1KC3BBZcPJCflngBVQLQArwd-LUF-kiCHz60EOkfBmrDusiwjzPq7UiUygB7Fb7pT_DVXAoHomIO1qZoKbyfBaOOsUUUQUyH8xgJvOo3ILwaGpNbd8zlEfAX8YzmSRkz_2OevhUZRzJSDd8ZlrtX3RId884Us_7_aZB9BQjm5WQ0Qd2B7q8r7yEPjzb4oOGpZ-hyTMk5tbO3ML_r_mrizZ1IvUcO9A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+</div>
+<div class="p-4 flex flex-col items-start gap-1">
+<h3 class="font-label-md text-label-md text-secondary flex items-center gap-1">Eléctricas <span class="material-symbols-outlined text-secondary-fixed text-base" style="font-variation-settings: 'FILL' 1;">bolt</span></h3>
+<span class="font-label-sm text-label-sm text-secondary-fixed flex items-center gap-1 group-hover:gap-2 transition-all">Ver catálogo <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+</div>
+</a>
+<!-- BMX -->
+<a class="group relative rounded-xl overflow-hidden bg-surface-container border border-outline-variant/30 hover:border-secondary-fixed/60 transition-colors flex flex-col" href="catalogo.html?cat=bmx">
+<div class="relative h-32 md:h-40 w-full overflow-hidden bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary-fixed transition-colors text-5xl">sports_motorsports</span>
+</div>
+<div class="p-4 flex flex-col items-start gap-1">
+<h3 class="font-label-md text-label-md text-secondary">BMX</h3>
+<span class="font-label-sm text-label-sm text-secondary-fixed flex items-center gap-1 group-hover:gap-2 transition-all">Ver catálogo <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+</div>
+</a>
+<!-- Infantiles -->
+<a class="group relative rounded-xl overflow-hidden bg-surface-container border border-outline-variant/30 hover:border-secondary-fixed/60 transition-colors flex flex-col" href="catalogo.html?cat=ninos">
+<div class="relative h-32 md:h-40 w-full overflow-hidden bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary-fixed transition-colors text-5xl">child_care</span>
+</div>
+<div class="p-4 flex flex-col items-start gap-1">
+<h3 class="font-label-md text-label-md text-secondary">Infantiles</h3>
+<span class="font-label-sm text-label-sm text-secondary-fixed flex items-center gap-1 group-hover:gap-2 transition-all">Ver catálogo <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+</div>
+</a>
+<!-- Plegables -->
+<a class="group relative rounded-xl overflow-hidden bg-surface-container border border-outline-variant/30 hover:border-secondary-fixed/60 transition-colors flex flex-col" href="catalogo.html?cat=plegable">
+<div class="relative h-32 md:h-40 w-full overflow-hidden bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary-fixed transition-colors text-5xl">unfold_more</span>
+</div>
+<div class="p-4 flex flex-col items-start gap-1">
+<h3 class="font-label-md text-label-md text-secondary">Plegables</h3>
+<span class="font-label-sm text-label-sm text-secondary-fixed flex items-center gap-1 group-hover:gap-2 transition-all">Ver catálogo <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+</div>
+</a>
+<!-- Accesorios y Repuestos -->
+<a class="group relative rounded-xl overflow-hidden bg-secondary-container/10 border border-secondary-fixed/40 hover:border-secondary-fixed transition-colors flex flex-col" href="catalogo.html?cat=accesorios">
+<div class="relative h-32 md:h-40 w-full overflow-hidden bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary-fixed transition-colors text-5xl">backpack</span>
+</div>
+<div class="p-4 flex flex-col items-start gap-1">
+<h3 class="font-label-md text-label-md text-secondary">Accesorios y Repuestos</h3>
+<span class="font-label-sm text-label-sm text-secondary-fixed flex items-center gap-1 group-hover:gap-2 transition-all">Ver catálogo <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+</div>
+</a>
+</div>
+</section>
+<!-- 5. Cómo Comprar (sección didáctica) -->
+<section class="py-stack-xl px-container-margin-mobile md:px-container-margin-desktop max-w-7xl mx-auto">
+<div class="mb-stack-lg text-center">
+<h2 class="font-headline-md text-headline-md text-secondary">Cómo comprar en Velocore</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-2xl mx-auto">Comprar tu bicicleta es simple. Sin complicaciones, en 4 pasos.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="bg-surface-container-low border border-outline-variant/20 rounded-xl p-6 flex flex-col gap-3">
+<span class="font-headline-lg text-headline-lg text-secondary-fixed/40">01</span>
+<span class="material-symbols-outlined text-secondary-fixed text-3xl">pedal_bike</span>
+<h3 class="font-label-md text-label-md text-secondary">Elige tu bici</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Explora por categoría o usa los filtros del catálogo para encontrar la ideal.</p>
+</div>
+<div class="bg-surface-container-low border border-outline-variant/20 rounded-xl p-6 flex flex-col gap-3">
+<span class="font-headline-lg text-headline-lg text-secondary-fixed/40">02</span>
+<span class="material-symbols-outlined text-secondary-fixed text-3xl" style="font-variation-settings: 'FILL' 1;">chat</span>
+<h3 class="font-label-md text-label-md text-secondary">Cotiza y consulta</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Escríbenos por WhatsApp o llámanos y resolvemos tus dudas al instante.</p>
+</div>
+<div class="bg-surface-container-low border border-outline-variant/20 rounded-xl p-6 flex flex-col gap-3">
+<span class="font-headline-lg text-headline-lg text-secondary-fixed/40">03</span>
+<span class="material-symbols-outlined text-secondary-fixed text-3xl">payments</span>
+<h3 class="font-label-md text-label-md text-secondary">Elige cómo pagar</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Yape, Plin, tarjeta hasta en 12 cuotas, o efectivo contra-entrega. Sin tarjeta también puedes comprar.</p>
+</div>
+<div class="bg-surface-container-low border border-outline-variant/20 rounded-xl p-6 flex flex-col gap-3">
+<span class="font-headline-lg text-headline-lg text-secondary-fixed/40">04</span>
+<span class="material-symbols-outlined text-secondary-fixed text-3xl">local_shipping</span>
+<h3 class="font-label-md text-label-md text-secondary">Recíbela</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Envío a todo el Perú. Recíbela en tu casa o retírala en nuestro taller.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- 14. Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant w-full mt-stack-xl">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter px-container-margin-mobile md:px-container-margin-desktop py-stack-xl max-w-7xl mx-auto">
+<!-- Brand Column -->
+<div class="col-span-2 md:col-span-1 flex flex-col gap-4">
+<span class="font-headline-md text-headline-md text-secondary-fixed">Velocore</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Expertos en alto rendimiento. Elevando el estándar del ciclismo en Perú.</p>
+</div>
+<!-- Links Columns -->
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-secondary mb-2">Categorías</span>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="catalogo.html?cat=ruta">Bicicletas de Ruta</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="catalogo.html?cat=mtb">MTB</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="catalogo.html?cat=electrica">E-bikes</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-secondary mb-2">Soporte</span>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Garantía</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Envíos</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Contacto</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-secondary mb-2">Legal</span>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Términos y Condiciones</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Políticas de Privacidad</a>
+</div>
+</div>
+<div class="px-container-margin-mobile md:px-container-margin-desktop pb-8 max-w-7xl mx-auto border-t border-outline-variant/30 pt-8 mt-4 text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Velocore Perú. Expertos en alto rendimiento.</span>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="bg-surface-container dark:bg-surface-container fixed bottom-0 w-full md:hidden z-50 border-t border-outline-variant shadow-lg">
+<div class="flex justify-around items-center py-2 px-4">
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full p-2 scale-110 duration-200" href="index.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-variant rounded-full transition-colors" href="catalogo.html">
+<span class="material-symbols-outlined">search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-variant rounded-full transition-colors relative" href="carrito.html">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute top-1 right-1 bg-secondary-container text-on-secondary-container text-[8px] font-bold h-3 w-3 rounded-full flex items-center justify-center" data-cart-count="">0</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-variant rounded-full transition-colors" href="#">
+<span class="material-symbols-outlined">chat</span>
+</a>
+</div>
+</nav>
+<!-- FAB WhatsApp (Hidden on mobile to avoid clashing with bottom nav, shown on desktop) -->
+<button class="hidden md:flex fixed bottom-8 right-8 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-105 transition-transform z-50 items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+</button>
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script>
+        // Simple script for header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md', 'bg-background/95', 'backdrop-blur-md');
+                header.classList.remove('bg-background');
+            } else {
+                header.classList.remove('shadow-md', 'bg-background/95', 'backdrop-blur-md');
+                header.classList.add('bg-background');
+            }
+        });
+    </script>
+</body></html>

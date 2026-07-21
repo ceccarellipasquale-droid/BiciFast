@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Velocore - Catálogo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-background": "#e0e3e4",
+                      "on-tertiary-fixed-variant": "#42484a",
+                      "on-surface": "#e0e3e4",
+                      "on-error-container": "#ffdad6",
+                      "error-container": "#93000a",
+                      "secondary": "#ffffff",
+                      "inverse-surface": "#e0e3e4",
+                      "inverse-on-surface": "#2d3132",
+                      "on-tertiary": "#2b3133",
+                      "surface-variant": "#313536",
+                      "on-secondary-fixed-variant": "#3f4c00",
+                      "background": "#101415",
+                      "tertiary-fixed-dim": "#c2c7ca",
+                      "primary-container": "#bec6e0",
+                      "outline": "#909097",
+                      "inverse-primary": "#565e74",
+                      "surface-container-highest": "#313536",
+                      "on-secondary-container": "#5a6c00",
+                      "tertiary-fixed": "#dee3e6",
+                      "on-primary-fixed-variant": "#3e465c",
+                      "surface-dim": "#101415",
+                      "secondary-container": "#cdf200",
+                      "on-tertiary-fixed": "#171d1e",
+                      "on-primary-fixed": "#131b2e",
+                      "surface-bright": "#363a3b",
+                      "surface-container-lowest": "#0b0f10",
+                      "error": "#ffb4ab",
+                      "outline-variant": "#45464d",
+                      "surface-container": "#1c2021",
+                      "primary-fixed": "#dae2fd",
+                      "secondary-fixed-dim": "#b3d400",
+                      "on-secondary-fixed": "#181e00",
+                      "surface": "#101415",
+                      "on-surface-variant": "#c6c6cd",
+                      "on-tertiary-container": "#4d5355",
+                      "on-error": "#690005",
+                      "secondary-fixed": "#cdf200",
+                      "surface-container-low": "#181c1d",
+                      "on-secondary": "#2b3400",
+                      "surface-tint": "#bec6e0",
+                      "on-primary-container": "#4a5268",
+                      "primary": "#dae2fd",
+                      "surface-container-high": "#272b2c",
+                      "tertiary": "#dee3e6",
+                      "primary-fixed-dim": "#bec6e0",
+                      "on-primary": "#283044",
+                      "tertiary-container": "#c1c7ca"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "16px",
+                      "stack-lg": "32px",
+                      "stack-xl": "64px",
+                      "unit": "8px",
+                      "container-margin-desktop": "48px",
+                      "stack-sm": "8px",
+                      "stack-md": "16px",
+                      "container-margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "headline-xl": [
+                              "Montserrat"
+                      ],
+                      "headline-md": [
+                              "Montserrat"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Montserrat"
+                      ],
+                      "headline-lg": [
+                              "Montserrat"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-xl": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "34px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for dark mode */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #101415;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #313536;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #45464d;
+        }
+
+        .ambient-shadow {
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        .glow-hover:hover {
+            box-shadow: 0 0 15px 0 rgba(205, 242, 0, 0.1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-sans selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopAppBar -->
+<header class="bg-background dark:bg-background text-secondary dark:text-secondary fixed top-0 w-full z-50 border-b border-outline-variant shadow-sm flex items-center justify-between px-container-margin-mobile md:px-container-margin-desktop h-20 transition-all duration-300" id="top-app-bar">
+<button aria-label="Menu" class="text-on-surface-variant hover:text-secondary-fixed transition-colors scale-95 active:duration-100 p-2" onclick="toggleDrawer()">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+<a class="font-headline-xl text-headline-xl text-secondary-fixed dark:text-secondary-fixed tracking-tighter" href="index.html">Velocore</a>
+<a aria-label="Carrito" class="font-label-md text-label-md text-on-surface-variant hover:text-secondary-fixed transition-colors scale-95 active:duration-100 p-2 relative" href="carrito.html">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute -top-1 -right-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center" data-cart-count="">0</span>
+</a>
+</header>
+<!-- NavigationDrawer (Hidden by default) -->
+<div class="fixed inset-0 bg-black/60 z-[55] opacity-0 pointer-events-none transition-opacity duration-300" id="nav-drawer-overlay" onclick="toggleDrawer()"></div>
+<nav class="bg-surface-container dark:bg-surface-container text-secondary-fixed rounded-r-xl h-full w-80 shadow-xl fixed left-0 top-0 z-[60] -translate-x-full transition-transform duration-300 ease-in-out flex flex-col" id="nav-drawer">
+<div class="p-container-margin-mobile border-b border-surface-container-highest flex items-center justify-between">
+<h2 class="font-headline-md text-headline-md text-secondary-fixed">Velocore Menú</h2>
+<button class="text-on-surface-variant p-2 hover:bg-surface-variant rounded-full transition-colors" onclick="toggleDrawer()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<ul class="flex-1 py-stack-md overflow-y-auto space-y-2">
+<li>
+<a class="bg-secondary-container text-on-secondary-container rounded-lg mx-2 px-4 py-3 flex items-center gap-3 transition-all duration-200 ease-in-out font-label-md text-label-md" href="catalogo.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">pedal_bike</span>
+                    Bicicletas
+                </a>
+</li>
+<li>
+<a class="text-on-surface-variant mx-2 px-4 py-3 flex items-center gap-3 hover:bg-surface-variant rounded-lg transition-all duration-200 ease-in-out font-label-md text-label-md" href="catalogo.html?cat=componentes">
+<span class="material-symbols-outlined">settings</span>
+                    Componentes
+                </a>
+</li>
+<li>
+<a class="text-on-surface-variant mx-2 px-4 py-3 flex items-center gap-3 hover:bg-surface-variant rounded-lg transition-all duration-200 ease-in-out font-label-md text-label-md" href="catalogo.html?cat=accesorios">
+<span class="material-symbols-outlined">backpack</span>
+                    Accesorios
+                </a>
+</li>
+<li>
+<a class="text-on-surface-variant mx-2 px-4 py-3 flex items-center gap-3 hover:bg-surface-variant rounded-lg transition-all duration-200 ease-in-out font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">build</span>
+                    Taller
+                </a>
+</li>
+<li>
+<a class="text-on-surface-variant mx-2 px-4 py-3 flex items-center gap-3 hover:bg-surface-variant rounded-lg transition-all duration-200 ease-in-out font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">sell</span>
+                    Ofertas
+                </a>
+</li>
+</ul>
+</nav>
+<!-- Main Content -->
+<main class="flex-1 pt-24 pb-20 px-container-margin-mobile md:px-container-margin-desktop max-w-7xl mx-auto w-full flex flex-col md:flex-row gap-gutter">
+<!-- Mobile Search & Filter Bar -->
+<div class="md:hidden flex flex-col gap-unit mb-stack-md sticky top-20 z-40 bg-background/95 backdrop-blur py-2 -mx-container-margin-mobile px-container-margin-mobile border-b border-outline-variant/30">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-surface-container-high border border-transparent focus:border-secondary-fixed text-on-surface font-body-md text-body-md rounded-lg pl-10 pr-4 py-3 transition-colors outline-none placeholder:text-on-surface-variant" id="search-input-mobile" placeholder="Buscar productos..." type="text"/>
+</div>
+<button class="flex items-center justify-center gap-2 bg-surface-container border border-outline-variant/30 text-on-surface font-label-md text-label-md py-3 rounded-lg w-full active:scale-95 transition-transform" onclick="toggleFilters()">
+<span class="material-symbols-outlined">tune</span>
+                Filtros &amp; Ordenar
+            </button>
+</div>
+<!-- Sidebar Filters (Collapsible on Mobile, Fixed on Desktop) -->
+<aside class="fixed inset-0 z-[55] bg-surface-container/95 backdrop-blur-sm md:static md:bg-transparent md:backdrop-blur-none md:z-auto md:w-64 flex-shrink-0 transform translate-y-full md:translate-y-0 transition-transform duration-300 ease-in-out flex flex-col h-full md:h-auto overflow-hidden rounded-t-xl md:rounded-none" id="filters-sidebar">
+<div class="p-container-margin-mobile border-b border-outline-variant/30 flex justify-between items-center md:hidden">
+<h3 class="font-headline-md text-headline-md text-secondary-fixed">Filtros</h3>
+<button class="p-2 text-on-surface-variant hover:text-secondary-fixed rounded-full bg-surface-variant" onclick="toggleFilters()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex-1 overflow-y-auto p-container-margin-mobile md:p-0 space-y-stack-md pb-24 md:pb-0">
+<!-- Desktop Search (Hidden on Mobile) -->
+<div class="hidden md:block relative w-full mb-stack-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-surface-container-high border border-transparent focus:border-secondary-fixed text-on-surface font-body-md text-body-md rounded-lg pl-10 pr-4 py-2 transition-colors outline-none placeholder:text-on-surface-variant" id="search-input-desktop" placeholder="Buscar..." type="text"/>
+</div>
+<!-- Categoría Filter -->
+<div class="border-b border-outline-variant/20 pb-4">
+<h4 class="font-label-md text-label-md text-secondary-fixed mb-3 flex items-center justify-between cursor-pointer">
+                        Categoría
+                    </h4>
+<div class="space-y-2" id="category-filters">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="peer sr-only cat-filter" data-cat="ruta" type="checkbox"/>
+<div class="w-4 h-4 rounded border border-primary-container peer-checked:bg-secondary-fixed peer-checked:border-secondary-fixed flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[12px] text-background opacity-0 peer-checked:opacity-100 font-bold">check</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface transition-colors">Ruta</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="peer sr-only cat-filter" data-cat="mtb" type="checkbox"/>
+<div class="w-4 h-4 rounded border border-primary-container peer-checked:bg-secondary-fixed peer-checked:border-secondary-fixed flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[12px] text-background opacity-0 peer-checked:opacity-100 font-bold">check</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface transition-colors">MTB / Montañeras</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="peer sr-only cat-filter" data-cat="urbana" type="checkbox"/>
+<div class="w-4 h-4 rounded border border-primary-container peer-checked:bg-secondary-fixed peer-checked:border-secondary-fixed flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[12px] text-background opacity-0 peer-checked:opacity-100 font-bold">check</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface transition-colors">Urbanas</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="peer sr-only cat-filter" data-cat="electrica" type="checkbox"/>
+<div class="w-4 h-4 rounded border border-primary-container peer-checked:bg-secondary-fixed peer-checked:border-secondary-fixed flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[12px] text-background opacity-0 peer-checked:opacity-100 font-bold">check</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface transition-colors">Eléctricas</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="peer sr-only cat-filter" data-cat="bmx" type="checkbox"/>
+<div class="w-4 h-4 rounded border border-primary-container peer-checked:bg-secondary-fixed peer-checked:border-secondary-fixed flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[12px] text-background opacity-0 peer-checked:opacity-100 font-bold">check</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface transition-colors">BMX</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="peer sr-only cat-filter" data-cat="ninos" type="checkbox"/>
+<div class="w-4 h-4 rounded border border-primary-container peer-checked:bg-secondary-fixed peer-checked:border-secondary-fixed flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[12px] text-background opacity-0 peer-checked:opacity-100 font-bold">check</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface transition-colors">Infantiles</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="peer sr-only cat-filter" data-cat="plegable" type="checkbox"/>
+<div class="w-4 h-4 rounded border border-primary-container peer-checked:bg-secondary-fixed peer-checked:border-secondary-fixed flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[12px] text-background opacity-0 peer-checked:opacity-100 font-bold">check</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface transition-colors">Plegables</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="peer sr-only cat-filter" data-cat="componentes" type="checkbox"/>
+<div class="w-4 h-4 rounded border border-primary-container peer-checked:bg-secondary-fixed peer-checked:border-secondary-fixed flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[12px] text-background opacity-0 peer-checked:opacity-100 font-bold">check</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface transition-colors">Componentes</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="peer sr-only cat-filter" data-cat="accesorios" type="checkbox"/>
+<div class="w-4 h-4 rounded border border-primary-container peer-checked:bg-secondary-fixed peer-checked:border-secondary-fixed flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[12px] text-background opacity-0 peer-checked:opacity-100 font-bold">check</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface transition-colors">Accesorios y Repuestos</span>
+</label>
+</div>
+</div>
+<!-- Precio Filter -->
+<div class="border-b border-outline-variant/20 pb-4">
+<h4 class="font-label-md text-label-md text-secondary-fixed mb-3">Precio Rango (S/)</h4>
+<div class="flex items-center gap-2">
+<input class="w-full bg-surface-container-high border border-transparent focus:border-secondary-fixed text-on-surface font-body-md text-body-md rounded-lg px-3 py-2 outline-none" id="price-min" placeholder="Min" type="number"/>
+<span class="text-on-surface-variant">-</span>
+<input class="w-full bg-surface-container-high border border-transparent focus:border-secondary-fixed text-on-surface font-body-md text-body-md rounded-lg px-3 py-2 outline-none" id="price-max" placeholder="Max" type="number"/>
+</div>
+</div>
+</div>
+<div class="p-container-margin-mobile border-t border-outline-variant/30 md:hidden bg-surface-container-highest">
+<button class="w-full bg-secondary-fixed text-background font-label-md text-label-md py-3 rounded-lg font-bold active:scale-95 transition-transform" onclick="toggleFilters()">Aplicar Filtros</button>
+</div>
+</aside>
+<!-- Product Grid Canvas -->
+<section class="flex-1">
+<div class="flex justify-between items-center mb-stack-md hidden md:flex">
+<h2 class="font-headline-md text-headline-md text-secondary" id="results-heading">Bicicletas <span class="text-on-surface-variant font-normal text-lg" id="results-count"></span></h2>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ordenar por:</span>
+<select class="bg-surface-container border border-outline-variant/30 text-on-surface rounded-lg py-1 px-3 outline-none focus:border-secondary-fixed text-sm" id="sort-select">
+<option value="recomendados">Recomendados</option>
+<option value="price-asc">Precio: Menor a Mayor</option>
+<option value="price-desc">Precio: Mayor a Menor</option>
+</select>
+</div>
+</div>
+<!-- Bento/Grid Layout for Products -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter" id="product-grid"></div>
+<div class="hidden text-center text-on-surface-variant font-body-md py-stack-xl flex flex-col items-center gap-4" id="empty-state">
+<span class="material-symbols-outlined text-5xl text-on-surface-variant/50">inventory_2</span>
+<p>Estamos actualizando esta categoría con nuevos productos. Escríbenos por WhatsApp y te ayudamos a encontrar tu bici.</p>
+<a class="text-secondary-fixed underline" href="catalogo.html">Ver todo el catálogo</a>
+</div>
+</section>
+</main>
+<!-- Floating WhatsApp Button -->
+<a aria-label="Contactar por WhatsApp" class="fixed bottom-24 md:bottom-8 right-4 md:right-8 z-40 bg-[#25D366] text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 ambient-shadow" href="#">
+<svg fill="currentColor" height="28" viewbox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+</svg>
+</a>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest text-secondary-fixed w-full border-t border-outline-variant grid grid-cols-2 md:grid-cols-4 gap-gutter px-container-margin-mobile md:px-container-margin-desktop py-stack-xl max-w-7xl mx-auto pb-32 md:pb-stack-xl">
+<div class="col-span-2 md:col-span-1">
+<h2 class="font-headline-md text-headline-md text-secondary-fixed mb-4">Velocore</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Expertos en alto rendimiento ciclista. Componentes y tecnología para superar tus límites.</p>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-secondary mb-3 uppercase tracking-wider">Catálogo</h3>
+<ul class="space-y-2">
+<li><a class="font-label-sm text-label-sm text-secondary-fixed underline opacity-80 hover:opacity-100 hover:text-secondary transition-colors" href="catalogo.html?cat=ruta">Bicicletas de Ruta</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary transition-colors" href="catalogo.html?cat=mtb">MTB</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary transition-colors" href="catalogo.html?cat=electrica">E-bikes</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-secondary mb-3 uppercase tracking-wider">Soporte</h3>
+<ul class="space-y-2">
+<li><a class="font-label-sm text-label-sm text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary transition-colors" href="#">Garantía</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary transition-colors" href="#">Envíos</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary transition-colors" href="#">Contacto</a></li>
+</ul>
+</div>
+<div class="col-span-2 md:col-span-4 mt-stack-md pt-stack-md border-t border-outline-variant/30 text-center">
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Velocore Perú. Expertos en alto rendimiento.</p>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="bg-surface-container dark:bg-surface-container text-secondary-fixed font-label-sm text-label-sm fixed bottom-0 w-full md:hidden z-50 border-t border-outline-variant shadow-lg flex justify-around items-center py-2 px-4">
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-variant scale-110 duration-200 rounded-lg" href="index.html">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="text-[10px]">Inicio</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full p-2 scale-110 duration-200" href="catalogo.html">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">search</span>
+<span class="text-[10px] font-bold">Explorar</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-variant scale-110 duration-200 rounded-lg relative" href="carrito.html">
+<span class="material-symbols-outlined mb-1">shopping_cart</span>
+<span class="text-[10px]">Carrito</span>
+<span class="absolute top-1 right-2 w-2 h-2 bg-error rounded-full hidden" data-cart-dot=""></span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-variant scale-110 duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined mb-1">chat</span>
+<span class="text-[10px]">Soporte</span>
+</a>
+</nav>
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script>
+        // Drawer toggle logic
+        function toggleDrawer() {
+            const drawer = document.getElementById('nav-drawer');
+            const overlay = document.getElementById('nav-drawer-overlay');
+
+            if (drawer.classList.contains('-translate-x-full')) {
+                drawer.classList.remove('-translate-x-full');
+                overlay.classList.remove('opacity-0', 'pointer-events-none');
+                overlay.classList.add('opacity-100');
+                document.body.style.overflow = 'hidden';
+            } else {
+                drawer.classList.add('-translate-x-full');
+                overlay.classList.remove('opacity-100');
+                overlay.classList.add('opacity-0', 'pointer-events-none');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Mobile Filters toggle logic
+        function toggleFilters() {
+            const sidebar = document.getElementById('filters-sidebar');
+            if (window.innerWidth < 768) {
+                if (sidebar.classList.contains('translate-y-full')) {
+                    sidebar.classList.remove('translate-y-full');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    sidebar.classList.add('translate-y-full');
+                    document.body.style.overflow = '';
+                }
+            }
+        }
+
+        // Hide app bar on scroll down, show on scroll up
+        let lastScroll = 0;
+        const appBar = document.getElementById('top-app-bar');
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll <= 0) {
+                appBar.classList.remove('-translate-y-full');
+                return;
+            }
+            if (currentScroll > lastScroll && !appBar.classList.contains('-translate-y-full')) {
+                appBar.classList.add('-translate-y-full');
+            } else if (currentScroll < lastScroll && appBar.classList.contains('-translate-y-full')) {
+                appBar.classList.remove('-translate-y-full');
+            }
+            lastScroll = currentScroll;
+        });
+
+        // --- Catálogo dinámico ---
+        const categoryLabels = {
+            ruta: 'Bicicletas de Ruta / Gravel',
+            mtb: 'Bicicletas Montañeras (MTB)',
+            componentes: 'Componentes',
+            accesorios: 'Accesorios y Repuestos',
+            urbana: 'Bicicletas Urbanas',
+            electrica: 'Bicicletas Eléctricas',
+            plegable: 'Bicicletas Plegables',
+            ninos: 'Bicicletas Infantiles',
+            bmx: 'Bicicletas BMX'
+        };
+
+        function getFilterState() {
+            const checked = Array.from(document.querySelectorAll('.cat-filter:checked')).map((el) => el.dataset.cat);
+            const search = (document.getElementById('search-input-desktop').value || document.getElementById('search-input-mobile').value || '').toLowerCase();
+            const min = parseFloat(document.getElementById('price-min').value) || 0;
+            const max = parseFloat(document.getElementById('price-max').value) || Infinity;
+            const sort = document.getElementById('sort-select').value;
+            return { checked, search, min, max, sort };
+        }
+
+        function productCardHTML(p, featured) {
+            const discountBadge = p.badge ? `<span class="${p.badge === '-15%' || p.badge.startsWith('-') ? 'bg-error text-on-error' : 'bg-secondary-fixed text-background'} font-label-sm text-label-sm px-2 py-1 rounded-sm font-bold uppercase tracking-wider">${p.badge}</span>` : '';
+            if (featured) {
+                return `
+                <a href="producto.html?id=${p.id}" class="col-span-1 sm:col-span-2 lg:col-span-2 row-span-2 bg-[#1d2122] rounded-xl border border-white/10 overflow-hidden relative group transition-all duration-300 hover:-translate-y-1 ambient-shadow glow-hover flex flex-col">
+                    <div class="absolute top-4 left-4 z-10 flex gap-2">${discountBadge}</div>
+                    <div class="relative h-64 sm:h-80 w-full overflow-hidden bg-surface-container-lowest">
+                        <div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-700" style="background-image:url('${p.image}')"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1d2122] via-transparent to-transparent opacity-80"></div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-end">
+                        <p class="font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase tracking-widest">${p.brand}</p>
+                        <h3 class="font-headline-lg-mobile md:font-headline-lg text-secondary mb-2 leading-tight">${p.name}</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">${p.short}</p>
+                        <div class="flex items-end justify-between mt-auto">
+                            <div>
+                                <p class="font-headline-md text-secondary-fixed">${formatPEN(p.price)}</p>
+                                ${p.oldPrice ? `<p class="font-label-sm text-label-sm text-on-surface-variant line-through">${formatPEN(p.oldPrice)}</p>` : ''}
+                            </div>
+                            <span class="bg-transparent border-2 border-primary-container text-primary-container font-label-md text-label-md px-4 py-2 rounded-lg font-bold">Ver Detalles</span>
+                        </div>
+                    </div>
+                </a>`;
+            }
+            return `
+                <div class="bg-[#1d2122] rounded-xl border border-white/10 overflow-hidden relative group transition-all duration-300 hover:-translate-y-1 ambient-shadow glow-hover flex flex-col h-full">
+                    <div class="absolute top-3 left-3 z-10 flex gap-2">${discountBadge}</div>
+                    <a href="producto.html?id=${p.id}" class="relative h-48 w-full overflow-hidden bg-surface-container-highest p-4 flex items-center justify-center">
+                        <div class="bg-contain bg-center bg-no-repeat w-full h-full transform group-hover:scale-105 transition-transform duration-500" style="background-image:url('${p.image}')"></div>
+                    </a>
+                    <div class="p-4 flex-1 flex flex-col">
+                        <p class="font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase">${p.brand}</p>
+                        <a href="producto.html?id=${p.id}"><h3 class="font-label-md text-label-md text-secondary mb-2 line-clamp-2">${p.name}</h3></a>
+                        <div class="mt-auto pt-4 flex justify-between items-center">
+                            <p class="font-headline-md text-secondary-fixed text-lg">${formatPEN(p.price)}</p>
+                            <button class="bg-surface-variant text-on-surface hover:bg-secondary-fixed hover:text-background w-8 h-8 rounded-full flex items-center justify-center transition-colors" onclick="addToCart('${p.id}'); event.stopPropagation();">
+                                <span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>`;
+        }
+
+        function renderCatalog() {
+            const params = new URLSearchParams(window.location.search);
+            const initialCat = params.get('cat');
+            if (initialCat) {
+                const box = document.querySelector(`.cat-filter[data-cat="${initialCat}"]`);
+                if (box) box.checked = true;
+            }
+
+            const { checked, search, min, max, sort } = getFilterState();
+            let products = VELOCORE_PRODUCTS.filter((p) => {
+                const matchesCat = checked.length === 0 ? true : checked.includes(p.category);
+                const matchesSearch = search ? (p.name + ' ' + p.brand).toLowerCase().includes(search) : true;
+                const matchesPrice = p.price >= min && p.price <= max;
+                return matchesCat && matchesSearch && matchesPrice;
+            });
+
+            if (sort === 'price-asc') products = products.slice().sort((a, b) => a.price - b.price);
+            if (sort === 'price-desc') products = products.slice().sort((a, b) => b.price - a.price);
+
+            const heading = checked.length === 1 ? (categoryLabels[checked[0]] || 'Catálogo') : 'Catálogo Velocore';
+            document.getElementById('results-heading').firstChild.textContent = heading + ' ';
+            document.getElementById('results-count').textContent = `(${products.length})`;
+
+            const grid = document.getElementById('product-grid');
+            const emptyState = document.getElementById('empty-state');
+            if (products.length === 0) {
+                grid.innerHTML = '';
+                emptyState.classList.remove('hidden');
+            } else {
+                emptyState.classList.add('hidden');
+                grid.innerHTML = products.map((p, i) => productCardHTML(p, i === 0 && sort === 'recomendados')).join('');
+            }
+        }
+
+        document.querySelectorAll('.cat-filter').forEach((el) => el.addEventListener('change', renderCatalog));
+        document.getElementById('search-input-desktop').addEventListener('input', renderCatalog);
+        document.getElementById('search-input-mobile').addEventListener('input', renderCatalog);
+        document.getElementById('price-min').addEventListener('input', renderCatalog);
+        document.getElementById('price-max').addEventListener('input', renderCatalog);
+        document.getElementById('sort-select').addEventListener('change', renderCatalog);
+
+        renderCatalog();
+    </script>
+</body></html>

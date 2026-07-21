@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Velocore - Ficha de Producto</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-background": "#e0e3e4",
+                      "on-tertiary-fixed-variant": "#42484a",
+                      "on-surface": "#e0e3e4",
+                      "on-error-container": "#ffdad6",
+                      "error-container": "#93000a",
+                      "secondary": "#ffffff",
+                      "inverse-surface": "#e0e3e4",
+                      "inverse-on-surface": "#2d3132",
+                      "on-tertiary": "#2b3133",
+                      "surface-variant": "#313536",
+                      "on-secondary-fixed-variant": "#3f4c00",
+                      "background": "#101415",
+                      "tertiary-fixed-dim": "#c2c7ca",
+                      "primary-container": "#bec6e0",
+                      "outline": "#909097",
+                      "inverse-primary": "#565e74",
+                      "surface-container-highest": "#313536",
+                      "on-secondary-container": "#5a6c00",
+                      "tertiary-fixed": "#dee3e6",
+                      "on-primary-fixed-variant": "#3e465c",
+                      "surface-dim": "#101415",
+                      "secondary-container": "#cdf200",
+                      "on-tertiary-fixed": "#171d1e",
+                      "on-primary-fixed": "#131b2e",
+                      "surface-bright": "#363a3b",
+                      "surface-container-lowest": "#0b0f10",
+                      "error": "#ffb4ab",
+                      "outline-variant": "#45464d",
+                      "surface-container": "#1c2021",
+                      "primary-fixed": "#dae2fd",
+                      "secondary-fixed-dim": "#b3d400",
+                      "on-secondary-fixed": "#181e00",
+                      "surface": "#101415",
+                      "on-surface-variant": "#c6c6cd",
+                      "on-tertiary-container": "#4d5355",
+                      "on-error": "#690005",
+                      "secondary-fixed": "#cdf200",
+                      "surface-container-low": "#181c1d",
+                      "on-secondary": "#2b3400",
+                      "surface-tint": "#bec6e0",
+                      "on-primary-container": "#4a5268",
+                      "primary": "#dae2fd",
+                      "surface-container-high": "#272b2c",
+                      "tertiary": "#dee3e6",
+                      "primary-fixed-dim": "#bec6e0",
+                      "on-primary": "#283044",
+                      "tertiary-container": "#c1c7ca"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "16px",
+                      "stack-lg": "32px",
+                      "stack-xl": "64px",
+                      "unit": "8px",
+                      "container-margin-desktop": "48px",
+                      "stack-sm": "8px",
+                      "stack-md": "16px",
+                      "container-margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "headline-xl": ["Montserrat"],
+                      "headline-md": ["Montserrat"],
+                      "label-md": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "headline-lg-mobile": ["Montserrat"],
+                      "headline-lg": ["Montserrat"],
+                      "body-md": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                      "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                      "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+                      "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                      "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                      "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                      "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                      "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background antialiased min-h-screen pb-[100px] flex justify-center">
+<main class="w-full max-w-[480px] relative bg-background shadow-2xl">
+<!-- Contextual Header -->
+<header class="fixed top-0 w-full max-w-[480px] z-50 flex items-center justify-between px-4 h-16 bg-gradient-to-b from-background/90 to-transparent backdrop-blur-sm">
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container/50 text-on-surface backdrop-blur-md active:scale-90 transition-transform" href="catalogo.html">
+<span class="material-symbols-outlined">arrow_back</span>
+</a>
+<div class="flex gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container/50 text-on-surface backdrop-blur-md active:scale-90 transition-transform">
+<span class="material-symbols-outlined">favorite_border</span>
+</button>
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container/50 text-on-surface backdrop-blur-md active:scale-90 transition-transform relative" href="carrito.html">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute -top-1 -right-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center" data-cart-count="">0</span>
+</a>
+</div>
+</header>
+<!-- Product Image Gallery -->
+<section class="relative w-full aspect-[4/5] bg-surface-container-highest">
+<div class="flex w-full h-full overflow-x-auto snap-x snap-mandatory no-scrollbar" id="gallery-track"></div>
+<div class="absolute bottom-4 left-0 w-full flex justify-center gap-2" id="gallery-dots"></div>
+</section>
+<!-- Product Information -->
+<section class="px-container-margin-mobile pt-stack-md pb-stack-lg flex flex-col gap-unit">
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-surface-container-high text-on-surface-variant font-label-sm px-2 py-1 rounded-md border border-outline-variant/30 uppercase tracking-wider" id="product-category">&nbsp;</span>
+<span class="flex items-center text-secondary-fixed font-label-sm gap-1">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span id="product-rating"></span>
+</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-background leading-tight" id="product-name"></h1>
+<div class="flex items-end gap-3 mt-2">
+<span class="font-headline-xl text-headline-xl text-secondary-fixed tracking-tight" id="product-price"></span>
+<span class="font-body-md text-body-md text-on-surface-variant line-through mb-1" id="product-old-price"></span>
+</div>
+<div class="bg-surface-container rounded-lg p-3 mt-2 border border-secondary-fixed/20 flex items-center gap-3" id="installments-box">
+<span class="material-symbols-outlined text-secondary-fixed">credit_card</span>
+<p class="font-label-md text-label-md text-on-surface" id="installments-text"></p>
+</div>
+</section>
+<!-- Selectors -->
+<section class="px-container-margin-mobile pb-stack-lg flex flex-col gap-stack-md">
+<!-- Color Selector -->
+<div id="color-section">
+<div class="flex justify-between items-center mb-3">
+<h3 class="font-label-md text-label-md text-on-surface">Color: <span class="text-on-surface-variant font-normal" id="selected-color-label"></span></h3>
+</div>
+<div class="flex gap-4" id="color-options"></div>
+</div>
+<!-- Size Selector -->
+<div id="size-section">
+<div class="flex justify-between items-center mb-3">
+<h3 class="font-label-md text-label-md text-on-surface">Talla:</h3>
+</div>
+<div class="grid grid-cols-4 gap-3" id="size-options"></div>
+<p class="font-label-sm text-label-sm text-secondary-fixed mt-3 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                    Stock disponible
+                </p>
+</div>
+</section>
+<!-- Technical Specs -->
+<section class="px-container-margin-mobile pb-stack-lg" id="specs-section">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Especificaciones Técnicas</h3>
+<div class="bg-surface-container rounded-xl overflow-hidden border border-outline-variant/50" id="specs-table"></div>
+</section>
+<!-- Description -->
+<section class="px-container-margin-mobile pb-stack-lg">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Descripción</h3>
+<p class="font-body-md text-body-md text-on-surface-variant" id="product-description"></p>
+</section>
+<!-- Related Products -->
+<section class="pl-container-margin-mobile pb-stack-xl">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4 pr-container-margin-mobile">Completa tu equipo</h3>
+<div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 no-scrollbar pr-4" id="related-products"></div>
+</section>
+<!-- WhatsApp FAB -->
+<a class="fixed bottom-[110px] right-4 z-40 w-14 h-14 bg-secondary-fixed rounded-full shadow-[0_4px_20px_rgba(205,242,0,0.3)] flex items-center justify-center hover:scale-105 active:scale-95 transition-transform" href="#">
+<svg class="w-8 h-8 text-[#101415] fill-current" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+</svg>
+</a>
+<!-- Sticky Bottom Actions -->
+<div class="fixed bottom-0 w-full max-w-[480px] bg-surface-container-high/95 backdrop-blur-md border-t border-outline-variant/30 p-4 z-50 shadow-[0_-10px_40px_rgba(0,0,0,0.5)]">
+<div class="flex gap-3">
+<button class="flex-1 bg-primary-container text-on-primary-container font-label-md text-label-md rounded-full py-3.5 flex items-center justify-center gap-2 active:scale-95 transition-transform shadow-md" id="btn-add-cart">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+                    Agregar al Carrito
+                </button>
+<button class="flex-1 bg-secondary-container text-on-secondary-container font-label-md text-label-md rounded-full py-3.5 font-bold flex items-center justify-center active:scale-95 transition-transform shadow-[0_0_15px_rgba(205,242,0,0.2)]" id="btn-buy-now">
+                    Comprar ahora
+                </button>
+</div>
+</div>
+</main>
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script>
+        const params = new URLSearchParams(window.location.search);
+        const product = getProductById(params.get('id')) || VELOCORE_PRODUCTS[0];
+        let selectedColor = product.colors && product.colors[0] ? product.colors[0].name : null;
+        let selectedSize = product.sizes && product.sizes.find((s) => !(product.unavailableSizes || []).includes(s)) || null;
+
+        function renderGallery() {
+            const track = document.getElementById('gallery-track');
+            const dots = document.getElementById('gallery-dots');
+            const images = product.gallery && product.gallery.length ? product.gallery : [product.image];
+            track.innerHTML = images.map((src) => `
+                <div class="w-full h-full flex-shrink-0 snap-center relative">
+                    <img class="w-full h-full object-cover" src="${src}"/>
+                </div>`).join('');
+            dots.innerHTML = images.map((_, i) => `
+                <div class="w-2 h-2 rounded-full ${i === 0 ? 'bg-secondary-fixed' : 'bg-on-surface-variant/40'}"></div>`).join('');
+        }
+
+        function renderColors() {
+            const section = document.getElementById('color-section');
+            if (!product.colors || product.colors.length === 0) {
+                section.classList.add('hidden');
+                return;
+            }
+            document.getElementById('selected-color-label').textContent = selectedColor;
+            document.getElementById('color-options').innerHTML = product.colors.map((c) => `
+                <button data-color="${c.name}" class="w-12 h-12 rounded-full border-2 ${c.name === selectedColor ? 'border-secondary-fixed' : 'border-transparent'} p-1 flex items-center justify-center transition-transform active:scale-95 color-swatch">
+                    <span class="w-full h-full rounded-full block relative overflow-hidden border border-white/10" style="background:${c.hex}">
+                        ${c.accent ? `<span class="absolute top-0 right-0 w-1/2 h-full" style="background:${c.accent}"></span>` : ''}
+                    </span>
+                </button>`).join('');
+            document.querySelectorAll('.color-swatch').forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    selectedColor = btn.dataset.color;
+                    renderColors();
+                });
+            });
+        }
+
+        function renderSizes() {
+            const section = document.getElementById('size-section');
+            if (!product.sizes || product.sizes.length === 0) {
+                section.classList.add('hidden');
+                return;
+            }
+            const unavailable = product.unavailableSizes || [];
+            document.getElementById('size-options').innerHTML = product.sizes.map((s) => {
+                const isUnavailable = unavailable.includes(s);
+                const isSelected = s === selectedSize;
+                if (isUnavailable) {
+                    return `<button disabled class="py-3 rounded-lg border border-outline-variant bg-surface-container/30 text-on-surface-variant font-label-md text-label-md text-center opacity-50 cursor-not-allowed">${s}</button>`;
+                }
+                return `<button data-size="${s}" class="size-option py-3 rounded-lg border ${isSelected ? 'border-2 border-secondary-fixed bg-secondary-container/10 text-secondary-fixed' : 'border-outline-variant bg-surface-container text-on-surface'} font-label-md text-label-md text-center active:scale-95 transition-all">${s}</button>`;
+            }).join('');
+            document.querySelectorAll('.size-option').forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    selectedSize = btn.dataset.size;
+                    renderSizes();
+                });
+            });
+        }
+
+        function renderSpecs() {
+            const section = document.getElementById('specs-section');
+            const entries = Object.entries(product.specs || {});
+            if (entries.length === 0) {
+                section.classList.add('hidden');
+                return;
+            }
+            document.getElementById('specs-table').innerHTML = entries.map(([label, value], i) => `
+                <div class="grid grid-cols-3 ${i < entries.length - 1 ? 'border-b border-outline-variant/30' : ''}">
+                    <div class="p-3 bg-surface-container-high font-label-sm text-on-surface-variant">${label}</div>
+                    <div class="p-3 col-span-2 font-body-md text-on-surface text-sm">${value}</div>
+                </div>`).join('');
+        }
+
+        function renderRelated() {
+            const related = VELOCORE_PRODUCTS.filter((p) => p.id !== product.id).slice(0, 4);
+            document.getElementById('related-products').innerHTML = related.map((p) => `
+                <a href="producto.html?id=${p.id}" class="w-[180px] flex-shrink-0 snap-start bg-surface-container rounded-xl overflow-hidden border border-outline-variant/30 shadow-sm relative group block">
+                    <div class="h-[140px] bg-surface-container-highest relative">
+                        <img class="w-full h-full object-cover" src="${p.image}"/>
+                    </div>
+                    <div class="p-3">
+                        <h4 class="font-label-md text-label-md text-on-surface line-clamp-2 mb-2">${p.name}</h4>
+                        <p class="font-label-md text-label-md text-secondary-fixed">${formatPEN(p.price)}</p>
+                    </div>
+                </a>`).join('');
+        }
+
+        function renderProduct() {
+            document.title = `Velocore - ${product.name}`;
+            document.getElementById('product-category').textContent = product.categoryLabel;
+            document.getElementById('product-rating').textContent = `${product.rating} (${product.reviews})`;
+            document.getElementById('product-name').textContent = product.name;
+            document.getElementById('product-price').textContent = formatPEN(product.price);
+            document.getElementById('product-old-price').textContent = product.oldPrice ? formatPEN(product.oldPrice) : '';
+            document.getElementById('product-description').textContent = product.description;
+
+            const installmentsBox = document.getElementById('installments-box');
+            if (product.installments) {
+                const monthly = product.price / 12;
+                document.getElementById('installments-text').textContent = `${product.installments} de ${formatPEN(monthly)}`;
+            } else {
+                installmentsBox.classList.add('hidden');
+            }
+
+            renderGallery();
+            renderColors();
+            renderSizes();
+            renderSpecs();
+            renderRelated();
+        }
+
+        document.getElementById('btn-add-cart').addEventListener('click', () => {
+            addToCart(product.id, { color: selectedColor, size: selectedSize, qty: 1 });
+        });
+
+        document.getElementById('btn-buy-now').addEventListener('click', () => {
+            addToCart(product.id, { color: selectedColor, size: selectedSize, qty: 1 });
+            window.location.href = 'carrito.html';
+        });
+
+        renderProduct();
+    </script>
+</body></html>

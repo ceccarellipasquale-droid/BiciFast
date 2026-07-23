@@ -1,5 +1,5 @@
-// Catálogo compartido de Velocore. Usado por catalogo.html, producto.html y carrito.html.
-const VELOCORE_PRODUCTS = [
+// Catálogo compartido de BiciFast. Usado por catalogo.html, producto.html y carrito.html.
+const BICIFAST_PRODUCTS = [
   {
     id: "tarmac-sl8-pro",
     name: "Tarmac SL8 Pro",
@@ -64,8 +64,8 @@ const VELOCORE_PRODUCTS = [
   },
   {
     id: "apex-carbon-29",
-    name: 'Velocore Apex Carbon 29"',
-    brand: "Velocore",
+    name: 'BiciFast Apex Carbon 29"',
+    brand: "BiciFast",
     category: "mtb",
     categoryLabel: "MTB Pro Series",
     price: 12499,
@@ -98,8 +98,8 @@ const VELOCORE_PRODUCTS = [
   },
   {
     id: "casco-aero-pro",
-    name: "Casco Velocore Aero Pro",
-    brand: "Velocore",
+    name: "Casco BiciFast Aero Pro",
+    brand: "BiciFast",
     category: "accesorios",
     categoryLabel: "Cascos",
     price: 450,
@@ -120,7 +120,7 @@ const VELOCORE_PRODUCTS = [
   {
     id: "lentes-vz1",
     name: "Lentes Fotocromáticos VZ1",
-    brand: "Velocore",
+    brand: "BiciFast",
     category: "accesorios",
     categoryLabel: "Accesorios",
     price: 320,
@@ -141,7 +141,7 @@ const VELOCORE_PRODUCTS = [
   {
     id: "guantes-grip-tech",
     name: "Guantes MTB Grip Tech",
-    brand: "Velocore",
+    brand: "BiciFast",
     category: "accesorios",
     categoryLabel: "Accesorios",
     price: 120,
@@ -208,5 +208,5 @@ function formatPEN(amount) {
 }
 
 function getProductById(id) {
-  return VELOCORE_PRODUCTS.find((p) => p.id === id);
+  return BICIFAST_PRODUCTS.find((p) => p.id === id);
 }

@@ -3,7 +3,20 @@
 <html class="dark" lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Velocore - Ficha de Producto</title>
+<title>Ficha de Producto | BiciFast</title>
+<meta content="Descubre esta bicicleta en BiciFast, con envío a todo el Perú y hasta 12 cuotas sin intereses." name="description" id="meta-description"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://bicifast.vercel.app/producto.html" id="canonical-link" rel="canonical"/>
+<meta content="product" property="og:type" id="og-type"/>
+<meta content="BiciFast" property="og:site_name"/>
+<meta content="es_PE" property="og:locale"/>
+<meta content="Ficha de Producto | BiciFast" property="og:title" id="og-title"/>
+<meta content="Descubre esta bicicleta en BiciFast, con envío a todo el Perú." property="og:description" id="og-description"/>
+<meta content="https://bicifast.vercel.app/producto.html" property="og:url" id="og-url"/>
+<meta content="" property="og:image" id="og-image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Ficha de Producto | BiciFast" name="twitter:title" id="twitter-title"/>
+<meta content="Descubre esta bicicleta en BiciFast." name="twitter:description" id="twitter-description"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <style>
@@ -218,7 +231,7 @@
 <script src="js/cart.js"></script>
 <script>
         const params = new URLSearchParams(window.location.search);
-        const product = getProductById(params.get('id')) || VELOCORE_PRODUCTS[0];
+        const product = getProductById(params.get('id')) || BICIFAST_PRODUCTS[0];
         let selectedColor = product.colors && product.colors[0] ? product.colors[0].name : null;
         let selectedSize = product.sizes && product.sizes.find((s) => !(product.unavailableSizes || []).includes(s)) || null;
 
@@ -228,7 +241,7 @@
             const images = product.gallery && product.gallery.length ? product.gallery : [product.image];
             track.innerHTML = images.map((src) => `
                 <div class="w-full h-full flex-shrink-0 snap-center relative">
-                    <img class="w-full h-full object-cover" src="${src}"/>
+                    <img alt="${product.name} - ${product.brand}" class="w-full h-full object-cover" src="${src}"/>
                 </div>`).join('');
             dots.innerHTML = images.map((_, i) => `
                 <div class="w-2 h-2 rounded-full ${i === 0 ? 'bg-secondary-fixed' : 'bg-on-surface-variant/40'}"></div>`).join('');
@@ -293,11 +306,11 @@
         }
 
         function renderRelated() {
-            const related = VELOCORE_PRODUCTS.filter((p) => p.id !== product.id).slice(0, 4);
+            const related = BICIFAST_PRODUCTS.filter((p) => p.id !== product.id).slice(0, 4);
             document.getElementById('related-products').innerHTML = related.map((p) => `
                 <a href="producto.html?id=${p.id}" class="w-[180px] flex-shrink-0 snap-start bg-surface-container rounded-xl overflow-hidden border border-outline-variant/30 shadow-sm relative group block">
                     <div class="h-[140px] bg-surface-container-highest relative">
-                        <img class="w-full h-full object-cover" src="${p.image}"/>
+                        <img alt="${p.name}" class="w-full h-full object-cover" src="${p.image}"/>
                     </div>
                     <div class="p-3">
                         <h4 class="font-label-md text-label-md text-on-surface line-clamp-2 mb-2">${p.name}</h4>
@@ -306,8 +319,57 @@
                 </a>`).join('');
         }
 
+        function updateSEO() {
+            const pageUrl = `https://bicifast.vercel.app/producto.html?id=${product.id}`;
+            const seoTitle = `${product.name} - ${product.categoryLabel} | BiciFast`;
+            const seoDescription = product.short || product.description;
+
+            document.title = seoTitle;
+            document.getElementById('meta-description').setAttribute('content', seoDescription);
+            document.getElementById('canonical-link').setAttribute('href', pageUrl);
+            document.getElementById('og-title').setAttribute('content', seoTitle);
+            document.getElementById('og-description').setAttribute('content', seoDescription);
+            document.getElementById('og-url').setAttribute('content', pageUrl);
+            document.getElementById('og-image').setAttribute('content', product.image);
+            document.getElementById('twitter-title').setAttribute('content', seoTitle);
+            document.getElementById('twitter-description').setAttribute('content', seoDescription);
+
+            const jsonLd = {
+                "@context": "https://schema.org",
+                "@type": "Product",
+                "name": product.name,
+                "brand": { "@type": "Brand", "name": product.brand },
+                "category": product.categoryLabel,
+                "description": product.description,
+                "image": product.gallery && product.gallery.length ? product.gallery : [product.image],
+                "offers": {
+                    "@type": "Offer",
+                    "url": pageUrl,
+                    "priceCurrency": "PEN",
+                    "price": product.price,
+                    "availability": "https://schema.org/InStock"
+                }
+            };
+            if (product.rating && product.reviews) {
+                jsonLd.aggregateRating = {
+                    "@type": "AggregateRating",
+                    "ratingValue": product.rating,
+                    "reviewCount": product.reviews
+                };
+            }
+
+            let script = document.getElementById('product-jsonld');
+            if (!script) {
+                script = document.createElement('script');
+                script.type = 'application/ld+json';
+                script.id = 'product-jsonld';
+                document.head.appendChild(script);
+            }
+            script.textContent = JSON.stringify(jsonLd);
+        }
+
         function renderProduct() {
-            document.title = `Velocore - ${product.name}`;
+            updateSEO();
             document.getElementById('product-category').textContent = product.categoryLabel;
             document.getElementById('product-rating').textContent = `${product.rating} (${product.reviews})`;
             document.getElementById('product-name').textContent = product.name;

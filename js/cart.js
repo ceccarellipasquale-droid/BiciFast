@@ -1,11 +1,11 @@
-// Carrito de Velocore. Persiste en localStorage y es compartido entre todas las páginas.
+// Carrito de BiciFast. Persiste en localStorage y es compartido entre todas las páginas.
 // Requiere que js/products.js esté cargado antes (getProductById, formatPEN).
 
-const VELOCORE_CART_KEY = "velocore_cart";
+const BICIFAST_CART_KEY = "bicifast_cart";
 
 function getCart() {
   try {
-    const raw = localStorage.getItem(VELOCORE_CART_KEY);
+    const raw = localStorage.getItem(BICIFAST_CART_KEY);
     return raw ? JSON.parse(raw) : [];
   } catch (e) {
     return [];
@@ -13,7 +13,7 @@ function getCart() {
 }
 
 function saveCart(cart) {
-  localStorage.setItem(VELOCORE_CART_KEY, JSON.stringify(cart));
+  localStorage.setItem(BICIFAST_CART_KEY, JSON.stringify(cart));
   updateCartBadges();
 }
 
@@ -86,10 +86,10 @@ function updateCartBadges() {
 }
 
 function showToast(message) {
-  let toast = document.getElementById("velocore-toast");
+  let toast = document.getElementById("bicifast-toast");
   if (!toast) {
     toast = document.createElement("div");
-    toast.id = "velocore-toast";
+    toast.id = "bicifast-toast";
     toast.style.cssText = [
       "position:fixed",
       "left:50%",

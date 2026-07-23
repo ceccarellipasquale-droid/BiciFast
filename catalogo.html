@@ -3,7 +3,19 @@
 <html class="dark" lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Velocore - Catálogo</title>
+<title>Catálogo de Bicicletas: MTB, Ruta, Urbanas, Eléctricas y BMX | BiciFast</title>
+<meta name="description" content="Explora el catálogo completo de bicicletas BiciFast en Lima, Perú. Filtra por categoría y precio, y encuentra tu bici ideal con envío a todo el país."/>
+<meta name="robots" content="index, follow"/>
+<link href="https://bicifast.vercel.app/catalogo.html" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="BiciFast" property="og:site_name"/>
+<meta content="es_PE" property="og:locale"/>
+<meta content="Catálogo de Bicicletas | BiciFast" property="og:title"/>
+<meta content="MTB, Ruta, Urbanas, Eléctricas, BMX, Infantiles y Plegables. Envío a todo el Perú." property="og:description"/>
+<meta content="https://bicifast.vercel.app/catalogo.html" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Catálogo de Bicicletas | BiciFast" name="twitter:title"/>
+<meta content="MTB, Ruta, Urbanas, Eléctricas, BMX, Infantiles y Plegables." name="twitter:description"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -207,7 +219,7 @@
 <button aria-label="Menu" class="text-on-surface-variant hover:text-secondary-fixed transition-colors scale-95 active:duration-100 p-2" onclick="toggleDrawer()">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
 </button>
-<a class="font-headline-xl text-headline-xl text-secondary-fixed dark:text-secondary-fixed tracking-tighter" href="index.html">Velocore</a>
+<a class="font-headline-xl text-headline-xl text-secondary-fixed dark:text-secondary-fixed tracking-tighter" href="index.html">BiciFast</a>
 <a aria-label="Carrito" class="font-label-md text-label-md text-on-surface-variant hover:text-secondary-fixed transition-colors scale-95 active:duration-100 p-2 relative" href="carrito.html">
 <span class="material-symbols-outlined">shopping_cart</span>
 <span class="absolute -top-1 -right-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center" data-cart-count="">0</span>
@@ -217,7 +229,7 @@
 <div class="fixed inset-0 bg-black/60 z-[55] opacity-0 pointer-events-none transition-opacity duration-300" id="nav-drawer-overlay" onclick="toggleDrawer()"></div>
 <nav class="bg-surface-container dark:bg-surface-container text-secondary-fixed rounded-r-xl h-full w-80 shadow-xl fixed left-0 top-0 z-[60] -translate-x-full transition-transform duration-300 ease-in-out flex flex-col" id="nav-drawer">
 <div class="p-container-margin-mobile border-b border-surface-container-highest flex items-center justify-between">
-<h2 class="font-headline-md text-headline-md text-secondary-fixed">Velocore Menú</h2>
+<h2 class="font-headline-md text-headline-md text-secondary-fixed">BiciFast Menú</h2>
 <button class="text-on-surface-variant p-2 hover:bg-surface-variant rounded-full transition-colors" onclick="toggleDrawer()">
 <span class="material-symbols-outlined">close</span>
 </button>
@@ -398,7 +410,7 @@
 <!-- Footer -->
 <footer class="bg-surface-container-lowest dark:bg-surface-container-lowest text-secondary-fixed w-full border-t border-outline-variant grid grid-cols-2 md:grid-cols-4 gap-gutter px-container-margin-mobile md:px-container-margin-desktop py-stack-xl max-w-7xl mx-auto pb-32 md:pb-stack-xl">
 <div class="col-span-2 md:col-span-1">
-<h2 class="font-headline-md text-headline-md text-secondary-fixed mb-4">Velocore</h2>
+<h2 class="font-headline-md text-headline-md text-secondary-fixed mb-4">BiciFast</h2>
 <p class="font-body-md text-body-md text-on-surface-variant mb-6">Expertos en alto rendimiento ciclista. Componentes y tecnología para superar tus límites.</p>
 </div>
 <div>
@@ -418,7 +430,7 @@
 </ul>
 </div>
 <div class="col-span-2 md:col-span-4 mt-stack-md pt-stack-md border-t border-outline-variant/30 text-center">
-<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Velocore Perú. Expertos en alto rendimiento.</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 BiciFast Perú. Expertos en alto rendimiento.</p>
 </div>
 </footer>
 <!-- BottomNavBar (Mobile Only) -->
@@ -567,7 +579,7 @@
             }
 
             const { checked, search, min, max, sort } = getFilterState();
-            let products = VELOCORE_PRODUCTS.filter((p) => {
+            let products = BICIFAST_PRODUCTS.filter((p) => {
                 const matchesCat = checked.length === 0 ? true : checked.includes(p.category);
                 const matchesSearch = search ? (p.name + ' ' + p.brand).toLowerCase().includes(search) : true;
                 const matchesPrice = p.price >= min && p.price <= max;
@@ -577,7 +589,7 @@
             if (sort === 'price-asc') products = products.slice().sort((a, b) => a.price - b.price);
             if (sort === 'price-desc') products = products.slice().sort((a, b) => b.price - a.price);
 
-            const heading = checked.length === 1 ? (categoryLabels[checked[0]] || 'Catálogo') : 'Catálogo Velocore';
+            const heading = checked.length === 1 ? (categoryLabels[checked[0]] || 'Catálogo') : 'Catálogo BiciFast';
             document.getElementById('results-heading').firstChild.textContent = heading + ' ';
             document.getElementById('results-count').textContent = `(${products.length})`;
 

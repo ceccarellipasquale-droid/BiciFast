@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /carrito.html
+
+Sitemap: https://bicifast.vercel.app/sitemap.xml

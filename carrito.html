@@ -3,7 +3,10 @@
 <html class="dark" lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Velocore - Carrito y Checkout</title>
+<title>Carrito de Compras | BiciFast</title>
+<meta name="description" content="Revisa los productos en tu carrito de BiciFast antes de finalizar tu compra."/>
+<meta name="robots" content="noindex, follow"/>
+<link href="https://bicifast.vercel.app/carrito.html" rel="canonical"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -121,7 +124,7 @@
 <a class="text-secondary-fixed hover:text-secondary-fixed transition-colors scale-95 active:duration-100 p-2" href="catalogo.html">
 <span class="material-symbols-outlined">arrow_back</span>
 </a>
-<a class="font-headline-xl text-headline-xl text-secondary-fixed dark:text-secondary-fixed tracking-tighter" href="index.html">Velocore</a>
+<a class="font-headline-xl text-headline-xl text-secondary-fixed dark:text-secondary-fixed tracking-tighter" href="index.html">BiciFast</a>
 <button class="text-on-surface-variant hover:text-secondary-fixed transition-colors scale-95 active:duration-100 p-2 opacity-0 pointer-events-none">
 <span class="material-symbols-outlined">arrow_back</span>
 </button>
@@ -218,7 +221,7 @@
 <div class="w-px h-4 bg-outline-variant"></div>
 <div class="flex items-center gap-1">
 <span class="material-symbols-outlined text-secondary-fixed" style="font-variation-settings: 'FILL' 1;">verified</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Garantía Velocore</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Garantía BiciFast</span>
 </div>
 </section>
 </main>
@@ -250,7 +253,7 @@
             return `
                 <div class="flex items-center gap-4 pb-4 border-b border-[#ffffff05]">
                     <div class="w-16 h-16 rounded bg-surface-container flex-shrink-0 overflow-hidden">
-                        <img class="w-full h-full object-cover" src="${p.image}"/>
+                        <img alt="${p.name}" class="w-full h-full object-cover" src="${p.image}"/>
                     </div>
                     <div class="flex-grow">
                         <h3 class="font-label-md text-label-md text-secondary">${p.name}</h3>

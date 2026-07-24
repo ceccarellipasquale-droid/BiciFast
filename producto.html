@@ -235,13 +235,20 @@
         let selectedColor = product.colors && product.colors[0] ? product.colors[0].name : null;
         let selectedSize = product.sizes && product.sizes.find((s) => !(product.unavailableSizes || []).includes(s)) || null;
 
+        function getSelectedColorObject() {
+            return (product.colors || []).find((c) => c.name === selectedColor) || null;
+        }
+
         function renderGallery() {
             const track = document.getElementById('gallery-track');
             const dots = document.getElementById('gallery-dots');
-            const images = product.gallery && product.gallery.length ? product.gallery : [product.image];
+            const colorObj = getSelectedColorObject();
+            const images = (colorObj && colorObj.images && colorObj.images.length)
+                ? colorObj.images
+                : (product.gallery && product.gallery.length ? product.gallery : [product.image]);
             track.innerHTML = images.map((src) => `
                 <div class="w-full h-full flex-shrink-0 snap-center relative">
-                    <img alt="${product.name} - ${product.brand}" class="w-full h-full object-cover" src="${src}"/>
+                    <img alt="${product.name} - ${product.brand}${colorObj ? ' - color ' + colorObj.name : ''}" class="w-full h-full object-cover" src="${src}"/>
                 </div>`).join('');
             dots.innerHTML = images.map((_, i) => `
                 <div class="w-2 h-2 rounded-full ${i === 0 ? 'bg-secondary-fixed' : 'bg-on-surface-variant/40'}"></div>`).join('');
@@ -264,6 +271,7 @@
                 btn.addEventListener('click', () => {
                     selectedColor = btn.dataset.color;
                     renderColors();
+                    renderGallery();
                 });
             });
         }

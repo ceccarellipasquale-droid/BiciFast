@@ -1,4 +1,6 @@
 // Catálogo compartido de BiciFast. Usado por catalogo.html, producto.html y carrito.html.
+// Cada color puede tener su propio "images" (array de fotos de esa bici en ese color).
+// Si un color no trae "images", la ficha de producto usa la galería general del producto.
 const BICIFAST_PRODUCTS = [
   {
     id: "tarmac-sl8-pro",

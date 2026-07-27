@@ -174,6 +174,13 @@
 </section>
 <!-- Selectors -->
 <section class="px-container-margin-mobile pb-stack-lg flex flex-col gap-stack-md">
+<!-- Variant Selector (aro/talla con precio distinto) -->
+<div id="variant-section">
+<div class="flex justify-between items-center mb-3">
+<h3 class="font-label-md text-label-md text-on-surface">Elige tu opción:</h3>
+</div>
+<div class="grid grid-cols-2 gap-3" id="variant-options"></div>
+</div>
 <!-- Color Selector -->
 <div id="color-section">
 <div class="flex justify-between items-center mb-3">
@@ -234,24 +241,78 @@
         const product = getProductById(params.get('id')) || BICIFAST_PRODUCTS[0];
         let selectedColor = product.colors && product.colors[0] ? product.colors[0].name : null;
         let selectedSize = product.sizes && product.sizes.find((s) => !(product.unavailableSizes || []).includes(s)) || null;
+        let selectedVariant = product.variants && product.variants[0] ? product.variants[0].label : null;
 
         function getSelectedColorObject() {
             return (product.colors || []).find((c) => c.name === selectedColor) || null;
         }
 
+        function getSelectedVariantObject() {
+            return (product.variants || []).find((v) => v.label === selectedVariant) || null;
+        }
+
+        function getCurrentPrice() {
+            const variantObj = getSelectedVariantObject();
+            return variantObj ? variantObj.price : product.price;
+        }
+
+        function getCurrentOldPrice() {
+            const variantObj = getSelectedVariantObject();
+            if (variantObj) return variantObj.oldPrice || null;
+            return product.oldPrice || null;
+        }
+
         function renderGallery() {
             const track = document.getElementById('gallery-track');
             const dots = document.getElementById('gallery-dots');
+            const variantObj = getSelectedVariantObject();
             const colorObj = getSelectedColorObject();
-            const images = (colorObj && colorObj.images && colorObj.images.length)
+            const images = (variantObj && variantObj.image)
+                ? [variantObj.image]
+                : (colorObj && colorObj.images && colorObj.images.length)
                 ? colorObj.images
                 : (product.gallery && product.gallery.length ? product.gallery : [product.image]);
             track.innerHTML = images.map((src) => `
                 <div class="w-full h-full flex-shrink-0 snap-center relative">
-                    <img alt="${product.name} - ${product.brand}${colorObj ? ' - color ' + colorObj.name : ''}" class="w-full h-full object-cover" src="${src}"/>
+                    <img alt="${product.name} - ${product.brand}${colorObj ? ' - color ' + colorObj.name : ''}" class="w-full h-full object-contain" src="${src}"/>
                 </div>`).join('');
             dots.innerHTML = images.map((_, i) => `
                 <div class="w-2 h-2 rounded-full ${i === 0 ? 'bg-secondary-fixed' : 'bg-on-surface-variant/40'}"></div>`).join('');
+        }
+
+        function renderVariants() {
+            const section = document.getElementById('variant-section');
+            if (!product.variants || product.variants.length === 0) {
+                section.classList.add('hidden');
+                return;
+            }
+            document.getElementById('variant-options').innerHTML = product.variants.map((v) => `
+                <button data-variant="${v.label}" class="py-3 px-3 rounded-lg border ${v.label === selectedVariant ? 'border-2 border-secondary-fixed bg-secondary-container/10 text-secondary-fixed' : 'border-outline-variant bg-surface-container text-on-surface'} font-label-md text-label-md text-center active:scale-95 transition-all variant-option">
+                    <span class="block">${v.label}</span>
+                    <span class="block text-xs opacity-80 mt-0.5">${formatPEN(v.price)}</span>
+                </button>`).join('');
+            document.querySelectorAll('.variant-option').forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    selectedVariant = btn.dataset.variant;
+                    renderVariants();
+                    renderGallery();
+                    updatePriceDisplay();
+                });
+            });
+        }
+
+        function updatePriceDisplay() {
+            document.getElementById('product-price').textContent = formatPEN(getCurrentPrice());
+            const oldPrice = getCurrentOldPrice();
+            document.getElementById('product-old-price').textContent = oldPrice ? formatPEN(oldPrice) : '';
+            const installmentsBox = document.getElementById('installments-box');
+            if (product.installments) {
+                const monthly = getCurrentPrice() / 12;
+                document.getElementById('installments-text').textContent = `${product.installments} de ${formatPEN(monthly)}`;
+                installmentsBox.classList.remove('hidden');
+            } else {
+                installmentsBox.classList.add('hidden');
+            }
         }
 
         function renderColors() {
@@ -317,8 +378,8 @@
             const related = BICIFAST_PRODUCTS.filter((p) => p.id !== product.id).slice(0, 4);
             document.getElementById('related-products').innerHTML = related.map((p) => `
                 <a href="producto.html?id=${p.id}" class="w-[180px] flex-shrink-0 snap-start bg-surface-container rounded-xl overflow-hidden border border-outline-variant/30 shadow-sm relative group block">
-                    <div class="h-[140px] bg-surface-container-highest relative">
-                        <img alt="${p.name}" class="w-full h-full object-cover" src="${p.image}"/>
+                    <div class="h-[140px] bg-surface-container-highest relative p-2">
+                        <img alt="${p.name}" class="w-full h-full object-contain" src="${p.image}"/>
                     </div>
                     <div class="p-3">
                         <h4 class="font-label-md text-label-md text-on-surface line-clamp-2 mb-2">${p.name}</h4>
@@ -381,19 +442,11 @@
             document.getElementById('product-category').textContent = product.categoryLabel;
             document.getElementById('product-rating').textContent = `${product.rating} (${product.reviews})`;
             document.getElementById('product-name').textContent = product.name;
-            document.getElementById('product-price').textContent = formatPEN(product.price);
-            document.getElementById('product-old-price').textContent = product.oldPrice ? formatPEN(product.oldPrice) : '';
             document.getElementById('product-description').textContent = product.description;
             document.getElementById('whatsapp-fab').href = `https://wa.me/51993496607?text=${encodeURIComponent('Hola, quiero consultar por la ' + product.name)}`;
 
-            const installmentsBox = document.getElementById('installments-box');
-            if (product.installments) {
-                const monthly = product.price / 12;
-                document.getElementById('installments-text').textContent = `${product.installments} de ${formatPEN(monthly)}`;
-            } else {
-                installmentsBox.classList.add('hidden');
-            }
-
+            updatePriceDisplay();
+            renderVariants();
             renderGallery();
             renderColors();
             renderSizes();
@@ -402,11 +455,11 @@
         }
 
         document.getElementById('btn-add-cart').addEventListener('click', () => {
-            addToCart(product.id, { color: selectedColor, size: selectedSize, qty: 1 });
+            addToCart(product.id, { color: selectedColor, size: selectedSize, variant: selectedVariant, qty: 1 });
         });
 
         document.getElementById('btn-buy-now').addEventListener('click', () => {
-            addToCart(product.id, { color: selectedColor, size: selectedSize, qty: 1 });
+            addToCart(product.id, { color: selectedColor, size: selectedSize, variant: selectedVariant, qty: 1 });
             window.location.href = 'carrito.html';
         });
 

@@ -527,6 +527,14 @@
             return { checked, search, min, max, sort };
         }
 
+        function cardPriceLabel(p) {
+            if (p.variants && p.variants.length) {
+                const minPrice = Math.min(...p.variants.map((v) => v.price));
+                return `Desde ${formatPEN(minPrice)}`;
+            }
+            return formatPEN(p.price);
+        }
+
         function productCardHTML(p, featured) {
             const discountBadge = p.badge ? `<span class="${p.badge === '-15%' || p.badge.startsWith('-') ? 'bg-error text-on-error' : 'bg-secondary-fixed text-background'} font-label-sm text-label-sm px-2 py-1 rounded-sm font-bold uppercase tracking-wider">${p.badge}</span>` : '';
             if (featured) {
@@ -534,7 +542,7 @@
                 <a href="producto.html?id=${p.id}" class="col-span-1 sm:col-span-2 lg:col-span-2 row-span-2 bg-[#1d2122] rounded-xl border border-white/10 overflow-hidden relative group transition-all duration-300 hover:-translate-y-1 ambient-shadow glow-hover flex flex-col">
                     <div class="absolute top-4 left-4 z-10 flex gap-2">${discountBadge}</div>
                     <div class="relative h-64 sm:h-80 w-full overflow-hidden bg-surface-container-lowest">
-                        <div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-700" style="background-image:url('${p.image}')"></div>
+                        <div class="bg-contain bg-center bg-no-repeat w-full h-full transform group-hover:scale-105 transition-transform duration-700" style="background-image:url('${p.image}')"></div>
                         <div class="absolute inset-0 bg-gradient-to-t from-[#1d2122] via-transparent to-transparent opacity-80"></div>
                     </div>
                     <div class="p-6 flex-1 flex flex-col justify-end">
@@ -543,7 +551,7 @@
                         <p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">${p.short}</p>
                         <div class="flex items-end justify-between mt-auto">
                             <div>
-                                <p class="font-headline-md text-secondary-fixed">${formatPEN(p.price)}</p>
+                                <p class="font-headline-md text-secondary-fixed">${cardPriceLabel(p)}</p>
                                 ${p.oldPrice ? `<p class="font-label-sm text-label-sm text-on-surface-variant line-through">${formatPEN(p.oldPrice)}</p>` : ''}
                             </div>
                             <span class="bg-transparent border-2 border-primary-container text-primary-container font-label-md text-label-md px-4 py-2 rounded-lg font-bold">Ver Detalles</span>
@@ -561,7 +569,7 @@
                         <p class="font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase">${p.brand}</p>
                         <a href="producto.html?id=${p.id}"><h3 class="font-label-md text-label-md text-secondary mb-2 line-clamp-2">${p.name}</h3></a>
                         <div class="mt-auto pt-4 flex justify-between items-center">
-                            <p class="font-headline-md text-secondary-fixed text-lg">${formatPEN(p.price)}</p>
+                            <p class="font-headline-md text-secondary-fixed text-lg">${cardPriceLabel(p)}</p>
                             <button class="bg-surface-variant text-on-surface hover:bg-secondary-fixed hover:text-background w-8 h-8 rounded-full flex items-center justify-center transition-colors" onclick="addToCart('${p.id}'); event.stopPropagation();">
                                 <span class="material-symbols-outlined text-sm">add_shopping_cart</span>
                             </button>

@@ -249,11 +249,12 @@
 <script>
         function cartItemHTML(item) {
             const p = item.product;
-            const meta = [item.color, item.size].filter(Boolean).join(' · ');
+            const unitPrice = getItemUnitPrice(item);
+            const meta = [item.variant, item.color, item.size].filter(Boolean).join(' · ');
             return `
                 <div class="flex items-center gap-4 pb-4 border-b border-[#ffffff05]">
                     <div class="w-16 h-16 rounded bg-surface-container flex-shrink-0 overflow-hidden">
-                        <img alt="${p.name}" class="w-full h-full object-cover" src="${p.image}"/>
+                        <img alt="${p.name}" class="w-full h-full object-contain p-1" src="${p.image}"/>
                     </div>
                     <div class="flex-grow">
                         <h3 class="font-label-md text-label-md text-secondary">${p.name}</h3>
@@ -269,7 +270,7 @@
                         </div>
                     </div>
                     <div class="text-right">
-                        <span class="font-label-md text-label-md text-secondary-fixed">${formatPEN(p.price * item.qty)}</span>
+                        <span class="font-label-md text-label-md text-secondary-fixed">${formatPEN(unitPrice * item.qty)}</span>
                     </div>
                 </div>`;
         }

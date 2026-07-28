@@ -184,7 +184,7 @@ const BICIFAST_PRODUCTS = [
   },
   {
     id: "skys-aluminio-360",
-    name: "SKYS Aluminio 360",
+    name: "SKYS",
     brand: "SKYS",
     category: "mtb",
     categoryLabel: "Bicicletas Montañeras (MTB)",

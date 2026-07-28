@@ -41,8 +41,8 @@ const BICIFAST_PRODUCTS = [
     badge: "Top Ventas",
     rating: 4.9,
     reviews: 9,
-    short: "BMX con triple suspensión, frenos de disco y aros mag de aleación.",
-    description: "BMX con triple suspensión (horquilla delantera, amortiguador trasero y tija con resorte), frenos de disco y aros mag de aleación para máxima resistencia en saltos y trucos.",
+    short: "BMX cuadro cromoli con doble freno de disco, aros de aleación magnesio y asiento tipo gel.",
+    description: "BMX con cuadro cromoli, doble sistema de frenos de disco, llantas anchas multipropósito, asiento y timón regulable, aros de aleación magnesio, pedales de aluminio, asiento deportivo tipo gel y 4 pets acerados.",
     image: "img/productos/bmx/bmx-triple-suspension-azul-490-1.jpg",
     gallery: [
       "img/productos/bmx/bmx-triple-suspension-azul-490-1.jpg",
@@ -55,12 +55,12 @@ const BICIFAST_PRODUCTS = [
     ],
     sizes: [],
     unavailableSizes: [],
-    specs: { "Suspensión": "Triple (horquilla, amortiguador trasero y tija)", "Frenos": "Disco", "Aros": "Mag de aleación" },
+    specs: { "Cuadro": "Cromoli", "Frenos": "Doble sistema de disco", "Llantas": "Anchas multipropósito", "Asiento y timón": "Regulable", "Aros": "Aleación magnesio", "Pedales": "Aluminio", "Pets": "4 pets acerados" },
     installments: "Hasta 6 cuotas sin intereses"
   },
   {
     id: "phillips-p140",
-    name: "Phillips P140",
+    name: "Phillips P-140",
     brand: "Phillips",
     category: "ninos",
     categoryLabel: "Bicicletas Infantiles",
@@ -69,8 +69,8 @@ const BICIFAST_PRODUCTS = [
     badge: null,
     rating: 4.7,
     reviews: 4,
-    short: "Bicicleta infantil con parrilla alcochada, canasta forjada y luces auxiliares.",
-    description: "Bicicleta infantil con parrilla alcochada, canasta forjada y auxiliares con luces. Ideal para los primeros pedaleos con seguridad y estilo.",
+    short: "Bicicleta infantil con parrilla acolchada, canasta forjada y luces auxiliares.",
+    description: "Bicicleta infantil con parrilla acolchada, canasta forjada y auxiliares con luces. Ideal para los primeros pedaleos con seguridad y estilo.",
     image: "img/productos/infantiles/p140-aro12-azul-250.jpg",
     gallery: ["img/productos/infantiles/p140-aro12-azul-250.jpg"],
     colors: [],
@@ -81,12 +81,12 @@ const BICIFAST_PRODUCTS = [
     ],
     sizes: [],
     unavailableSizes: [],
-    specs: { "Parrilla": "Alcochada", "Canasta": "Forjada", "Luces": "Auxiliares con luces" },
+    specs: { "Parrilla": "Acolchada", "Canasta": "Forjada", "Luces": "Auxiliares con luces" },
     installments: null
   },
   {
     id: "phillips-p201",
-    name: "Phillips P201",
+    name: "Phillips P-201",
     brand: "Phillips",
     category: "ninos",
     categoryLabel: "Bicicletas Infantiles",
@@ -100,6 +100,11 @@ const BICIFAST_PRODUCTS = [
     image: "img/productos/infantiles/p201-aro12-250.jpg",
     gallery: ["img/productos/infantiles/p201-aro12-250.jpg"],
     colors: [],
+    variants: [
+      { label: "Aro 12", price: 250, image: "img/productos/infantiles/p201-aro12-250.jpg" },
+      { label: "Aro 16", price: 280 },
+      { label: "Aro 20", price: 300 }
+    ],
     sizes: [],
     unavailableSizes: [],
     specs: { "Parrilla": "Con respaldar", "Canasta": "Incluida", "Asiento": "Con resorte", "Protector": "De cadena" },
@@ -116,19 +121,19 @@ const BICIFAST_PRODUCTS = [
     badge: null,
     rating: 4.6,
     reviews: 2,
-    short: "Bicicleta aro 20 para niños más grandes, resistente y cómoda.",
-    description: "Bicicleta aro 20 pensada para niños más grandes que buscan dar el salto desde las bicis más chicas. Resistente y cómoda para uso diario.",
+    short: "Bicicleta aro 20 con suspensión delantera, freno de disco y 18 velocidades.",
+    description: "Bicicleta aro 20 con suspensión delantera, freno de disco y sistema de 18 velocidades. Resistente y cómoda para uso diario.",
     image: "img/productos/infantiles/phillips-aro20-350.jpg",
     gallery: ["img/productos/infantiles/phillips-aro20-350.jpg"],
     colors: [],
     sizes: [],
     unavailableSizes: [],
-    specs: { "Aro": "20\"" },
+    specs: { "Suspensión": "Delantera", "Freno": "Disco", "Velocidades": "18" },
     installments: null
   },
   {
     id: "phillips-p132",
-    name: "Phillips P132",
+    name: "Phillips P-132",
     brand: "Phillips",
     category: "ninos",
     categoryLabel: "Bicicletas Infantiles",
@@ -137,8 +142,8 @@ const BICIFAST_PRODUCTS = [
     badge: null,
     rating: 4.7,
     reviews: 5,
-    short: "Bicicleta infantil con parrilla alcochada, canasta y protector de cadena, en varios tamaños.",
-    description: "Bicicleta infantil con parrilla alcochada, canasta y protector de cadena. Disponible en varios tamaños para acompañar el crecimiento de tu hijo.",
+    short: "Bicicleta infantil con parrilla acolchada, canasta y protector de cadena, en varios tamaños.",
+    description: "Bicicleta infantil con parrilla acolchada, canasta y protector de cadena. Disponible en varios tamaños para acompañar el crecimiento de tu hijo.",
     image: "img/productos/infantiles/phillips-p132-aro12-250.jpg",
     gallery: ["img/productos/infantiles/phillips-p132-aro12-250.jpg"],
     colors: [],
@@ -149,16 +154,16 @@ const BICIFAST_PRODUCTS = [
     ],
     sizes: [],
     unavailableSizes: [],
-    specs: { "Incluye": "Parrilla alcochada, canasta, protector de cadena" },
+    specs: { "Incluye": "Parrilla acolchada, canasta, protector de cadena" },
     installments: null
   },
   {
     id: "phillips-p136",
-    name: "Phillips P136",
+    name: "Phillips P-136",
     brand: "Phillips",
     category: "ninos",
     categoryLabel: "Bicicletas Infantiles",
-    price: 280,
+    price: 290,
     oldPrice: null,
     badge: null,
     rating: 4.8,
@@ -169,12 +174,12 @@ const BICIFAST_PRODUCTS = [
     gallery: ["img/productos/infantiles/phillips-p136-aro12-280.jpg"],
     colors: [],
     variants: [
-      { label: "Aro 12", price: 280, image: "img/productos/infantiles/phillips-p136-aro12-280.jpg" },
+      { label: "Aro 12", price: 290, image: "img/productos/infantiles/phillips-p136-aro12-280.jpg" },
       { label: "Aro 16", price: 320, image: "img/productos/infantiles/phillips-p136-aro16-320.jpg" }
     ],
     sizes: [],
     unavailableSizes: [],
-    specs: { "Suspensión": "Doble", "Luces": "Delanteras y auxiliares" },
+    specs: { "Suspensión": "Doble", "Luces": "Delanteras y auxiliares con luces" },
     installments: null
   },
   {
@@ -188,8 +193,8 @@ const BICIFAST_PRODUCTS = [
     badge: "Top Ventas",
     rating: 4.8,
     reviews: 7,
-    short: "Montañera de cuadro de aluminio con frenos de disco y llanta gruesa todo terreno.",
-    description: "Montañera de cuadro de aluminio con frenos de disco y llanta gruesa para todo terreno. Resistente y ligera para uso diario o aventura.",
+    short: "Montañera de aluminio con suspensión delantera, frenos de disco y asiento tipo gel.",
+    description: "Montañera de estructura y aros de aluminio, con suspensión delantera, llantas anchas, mazas de rodaje de aluminio, sistema de frenos de disco, asiento tipo gel deportivo y timbre integrado a la manija.",
     image: "img/productos/montaneras/skys-aluminio-360-negro-1.jpg",
     gallery: [
       "img/productos/montaneras/skys-aluminio-360-negro-1.jpg",
@@ -201,7 +206,7 @@ const BICIFAST_PRODUCTS = [
     ],
     sizes: [],
     unavailableSizes: [],
-    specs: { "Cuadro": "Aluminio", "Frenos": "Disco", "Llanta": "Gruesa todo terreno" },
+    specs: { "Estructura": "Aluminio", "Suspensión": "Delantera", "Aros": "Aluminio", "Mazas": "Aluminio", "Frenos": "Disco", "Asiento": "Tipo gel deportivo", "Extras": "Timbre integrado a la manija" },
     installments: "Hasta 6 cuotas sin intereses"
   }
 ];

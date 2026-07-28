@@ -212,7 +212,7 @@
 </section>
 <!-- Related Products -->
 <section class="pl-container-margin-mobile pb-stack-xl">
-<h3 class="font-headline-md text-headline-md text-on-surface mb-4 pr-container-margin-mobile">Completa tu equipo</h3>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4 pr-container-margin-mobile">También te puede interesar</h3>
 <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 no-scrollbar pr-4" id="related-products"></div>
 </section>
 <!-- WhatsApp FAB -->
@@ -307,7 +307,8 @@
             document.getElementById('product-old-price').textContent = oldPrice ? formatPEN(oldPrice) : '';
             const installmentsBox = document.getElementById('installments-box');
             if (product.installments) {
-                const monthly = getCurrentPrice() / 12;
+                const months = parseInt((product.installments.match(/\d+/) || [12])[0], 10);
+                const monthly = getCurrentPrice() / months;
                 document.getElementById('installments-text').textContent = `${product.installments} de ${formatPEN(monthly)}`;
                 installmentsBox.classList.remove('hidden');
             } else {
@@ -375,7 +376,10 @@
         }
 
         function renderRelated() {
-            const related = BICIFAST_PRODUCTS.filter((p) => p.id !== product.id).slice(0, 4);
+            const others = BICIFAST_PRODUCTS.filter((p) => p.id !== product.id);
+            const sameCategory = others.filter((p) => p.category === product.category);
+            const rest = others.filter((p) => p.category !== product.category);
+            const related = sameCategory.concat(rest).slice(0, 4);
             document.getElementById('related-products').innerHTML = related.map((p) => `
                 <a href="producto.html?id=${p.id}" class="w-[180px] flex-shrink-0 snap-start bg-surface-container rounded-xl overflow-hidden border border-outline-variant/30 shadow-sm relative group block">
                     <div class="h-[140px] bg-surface-container-highest relative p-2">
@@ -392,6 +396,7 @@
             const pageUrl = `https://bicifast.vercel.app/producto.html?id=${product.id}`;
             const seoTitle = `${product.name} - ${product.categoryLabel} | BiciFast`;
             const seoDescription = product.short || product.description;
+            const absoluteImage = new URL(product.image, 'https://bicifast.vercel.app/').href;
 
             document.title = seoTitle;
             document.getElementById('meta-description').setAttribute('content', seoDescription);
@@ -399,7 +404,7 @@
             document.getElementById('og-title').setAttribute('content', seoTitle);
             document.getElementById('og-description').setAttribute('content', seoDescription);
             document.getElementById('og-url').setAttribute('content', pageUrl);
-            document.getElementById('og-image').setAttribute('content', product.image);
+            document.getElementById('og-image').setAttribute('content', absoluteImage);
             document.getElementById('twitter-title').setAttribute('content', seoTitle);
             document.getElementById('twitter-description').setAttribute('content', seoDescription);
 
@@ -410,22 +415,15 @@
                 "brand": { "@type": "Brand", "name": product.brand },
                 "category": product.categoryLabel,
                 "description": product.description,
-                "image": product.gallery && product.gallery.length ? product.gallery : [product.image],
+                "image": (product.gallery && product.gallery.length ? product.gallery : [product.image]).map((src) => new URL(src, 'https://bicifast.vercel.app/').href),
                 "offers": {
                     "@type": "Offer",
                     "url": pageUrl,
                     "priceCurrency": "PEN",
-                    "price": product.price,
+                    "price": getCurrentPrice(),
                     "availability": "https://schema.org/InStock"
                 }
             };
-            if (product.rating && product.reviews) {
-                jsonLd.aggregateRating = {
-                    "@type": "AggregateRating",
-                    "ratingValue": product.rating,
-                    "reviewCount": product.reviews
-                };
-            }
 
             let script = document.getElementById('product-jsonld');
             if (!script) {

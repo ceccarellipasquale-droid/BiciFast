@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ofertas | BiciFast</title>
+<meta name="description" content="Bicicletas en oferta en BiciFast: aprovecha los descuentos activos en BMX, montañeras y bicicletas infantiles."/>
+<meta name="robots" content="index, follow"/>
+<link href="https://bicifast.vercel.app/ofertas.html" rel="canonical"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="css/tailwind.css?v=1" rel="stylesheet"/>
+<style>
+    body { background-color: #101415; color: #e0e3e4; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #101415; }
+    ::-webkit-scrollbar-thumb { background: #313536; border-radius: 4px; }
+</style>
+</head>
+<body class="antialiased min-h-screen">
+<header class="bg-background fixed top-0 w-full z-50 border-b border-outline-variant shadow-sm flex items-center justify-between px-container-margin-mobile md:px-container-margin-desktop h-20">
+<a class="text-secondary-fixed hover:text-secondary-fixed transition-colors scale-95 active:duration-100 p-2" href="index.html">
+<span class="material-symbols-outlined">arrow_back</span>
+</a>
+<a class="font-headline-xl text-headline-xl text-secondary-fixed tracking-tighter" href="index.html">BiciFast</a>
+<a aria-label="Carrito" class="text-on-surface-variant hover:text-secondary-fixed transition-colors p-2 relative" href="carrito.html">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute -top-1 -right-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center" data-cart-count="">0</span>
+</a>
+</header>
+<main class="pt-32 pb-stack-xl px-container-margin-mobile md:px-container-margin-desktop max-w-7xl mx-auto">
+<h1 class="font-headline-lg text-headline-lg text-secondary mb-2">Ofertas</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">Bicicletas con descuento activo, por tiempo limitado.</p>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter" id="offers-grid"></div>
+<div class="hidden flex-col items-center gap-4 py-stack-xl text-center" id="empty-state">
+<span class="material-symbols-outlined text-5xl text-on-surface-variant/50">sell</span>
+<p class="font-body-md text-body-md text-on-surface-variant">No tenemos ofertas activas en este momento. Escríbenos por WhatsApp y te avisamos apenas tengamos una nueva promoción.</p>
+<a class="text-secondary-fixed underline" href="catalogo.html">Ver todo el catálogo</a>
+</div>
+</main>
+<footer class="border-t border-outline-variant/30 py-stack-lg px-container-margin-mobile text-center">
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 BiciFast Perú.</p>
+</footer>
+<script src="js/products.js"></script>
+<script>
+    const offers = BICIFAST_PRODUCTS.filter((p) => p.oldPrice);
+    const grid = document.getElementById('offers-grid');
+    const emptyState = document.getElementById('empty-state');
+    if (offers.length === 0) {
+        grid.classList.add('hidden');
+        emptyState.classList.remove('hidden');
+        emptyState.classList.add('flex');
+    } else {
+        grid.innerHTML = offers.map((p) => `
+            <a href="producto.html?id=${p.id}" class="bg-surface-container rounded-xl border border-outline-variant/30 overflow-hidden flex flex-col hover:-translate-y-1 transition-transform">
+                <div class="h-48 bg-surface-container-highest p-4 flex items-center justify-center">
+                    <img alt="${p.name}" class="w-full h-full object-contain" src="${p.image}"/>
+                </div>
+                <div class="p-4">
+                    <p class="font-label-sm text-label-sm text-on-surface-variant uppercase">${p.brand}</p>
+                    <h3 class="font-label-md text-label-md text-secondary mb-2">${p.name}</h3>
+                    <p class="font-headline-md text-secondary-fixed">${formatPEN(p.price)}</p>
+                    <p class="font-label-sm text-label-sm text-on-surface-variant line-through">${formatPEN(p.oldPrice)}</p>
+                </div>
+            </a>`).join('');
+    }
+</script>
+</body></html>

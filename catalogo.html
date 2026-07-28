@@ -3,7 +3,7 @@
 <html class="dark" lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Catálogo de Bicicletas: MTB, Ruta, Urbanas, Eléctricas y BMX | BiciFast</title>
+<title>Catálogo de Bicicletas: Montañeras, BMX e Infantiles | BiciFast</title>
 <meta name="description" content="Explora el catálogo completo de bicicletas BiciFast en Lima, Perú. Filtra por categoría y precio, y encuentra tu bici ideal con envío a todo el país."/>
 <meta name="robots" content="index, follow"/>
 <link href="https://bicifast.vercel.app/catalogo.html" rel="canonical"/>
@@ -11,177 +11,14 @@
 <meta content="BiciFast" property="og:site_name"/>
 <meta content="es_PE" property="og:locale"/>
 <meta content="Catálogo de Bicicletas | BiciFast" property="og:title"/>
-<meta content="MTB, Ruta, Urbanas, Eléctricas, BMX, Infantiles y Plegables. Envío a todo el Perú." property="og:description"/>
+<meta content="Montañeras, BMX e infantiles. Envío a todo el Perú." property="og:description"/>
 <meta content="https://bicifast.vercel.app/catalogo.html" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Catálogo de Bicicletas | BiciFast" name="twitter:title"/>
-<meta content="MTB, Ruta, Urbanas, Eléctricas, BMX, Infantiles y Plegables." name="twitter:description"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<meta content="Montañeras, BMX e infantiles." name="twitter:description"/>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              "colors": {
-                      "on-background": "#e0e3e4",
-                      "on-tertiary-fixed-variant": "#42484a",
-                      "on-surface": "#e0e3e4",
-                      "on-error-container": "#ffdad6",
-                      "error-container": "#93000a",
-                      "secondary": "#ffffff",
-                      "inverse-surface": "#e0e3e4",
-                      "inverse-on-surface": "#2d3132",
-                      "on-tertiary": "#2b3133",
-                      "surface-variant": "#313536",
-                      "on-secondary-fixed-variant": "#3f4c00",
-                      "background": "#101415",
-                      "tertiary-fixed-dim": "#c2c7ca",
-                      "primary-container": "#bec6e0",
-                      "outline": "#909097",
-                      "inverse-primary": "#565e74",
-                      "surface-container-highest": "#313536",
-                      "on-secondary-container": "#5a6c00",
-                      "tertiary-fixed": "#dee3e6",
-                      "on-primary-fixed-variant": "#3e465c",
-                      "surface-dim": "#101415",
-                      "secondary-container": "#cdf200",
-                      "on-tertiary-fixed": "#171d1e",
-                      "on-primary-fixed": "#131b2e",
-                      "surface-bright": "#363a3b",
-                      "surface-container-lowest": "#0b0f10",
-                      "error": "#ffb4ab",
-                      "outline-variant": "#45464d",
-                      "surface-container": "#1c2021",
-                      "primary-fixed": "#dae2fd",
-                      "secondary-fixed-dim": "#b3d400",
-                      "on-secondary-fixed": "#181e00",
-                      "surface": "#101415",
-                      "on-surface-variant": "#c6c6cd",
-                      "on-tertiary-container": "#4d5355",
-                      "on-error": "#690005",
-                      "secondary-fixed": "#cdf200",
-                      "surface-container-low": "#181c1d",
-                      "on-secondary": "#2b3400",
-                      "surface-tint": "#bec6e0",
-                      "on-primary-container": "#4a5268",
-                      "primary": "#dae2fd",
-                      "surface-container-high": "#272b2c",
-                      "tertiary": "#dee3e6",
-                      "primary-fixed-dim": "#bec6e0",
-                      "on-primary": "#283044",
-                      "tertiary-container": "#c1c7ca"
-              },
-              "borderRadius": {
-                      "DEFAULT": "0.25rem",
-                      "lg": "0.5rem",
-                      "xl": "0.75rem",
-                      "full": "9999px"
-              },
-              "spacing": {
-                      "gutter": "16px",
-                      "stack-lg": "32px",
-                      "stack-xl": "64px",
-                      "unit": "8px",
-                      "container-margin-desktop": "48px",
-                      "stack-sm": "8px",
-                      "stack-md": "16px",
-                      "container-margin-mobile": "16px"
-              },
-              "fontFamily": {
-                      "headline-xl": [
-                              "Montserrat"
-                      ],
-                      "headline-md": [
-                              "Montserrat"
-                      ],
-                      "label-md": [
-                              "Inter"
-                      ],
-                      "label-sm": [
-                              "Inter"
-                      ],
-                      "body-lg": [
-                              "Inter"
-                      ],
-                      "headline-lg-mobile": [
-                              "Montserrat"
-                      ],
-                      "headline-lg": [
-                              "Montserrat"
-                      ],
-                      "body-md": [
-                              "Inter"
-                      ]
-              },
-              "fontSize": {
-                      "headline-xl": [
-                              "40px",
-                              {
-                                      "lineHeight": "48px",
-                                      "letterSpacing": "-0.02em",
-                                      "fontWeight": "700"
-                              }
-                      ],
-                      "headline-md": [
-                              "24px",
-                              {
-                                      "lineHeight": "32px",
-                                      "fontWeight": "600"
-                              }
-                      ],
-                      "label-md": [
-                              "14px",
-                              {
-                                      "lineHeight": "20px",
-                                      "letterSpacing": "0.02em",
-                                      "fontWeight": "600"
-                              }
-                      ],
-                      "label-sm": [
-                              "12px",
-                              {
-                                      "lineHeight": "16px",
-                                      "letterSpacing": "0.05em",
-                                      "fontWeight": "500"
-                              }
-                      ],
-                      "body-lg": [
-                              "18px",
-                              {
-                                      "lineHeight": "28px",
-                                      "fontWeight": "400"
-                              }
-                      ],
-                      "headline-lg-mobile": [
-                              "28px",
-                              {
-                                      "lineHeight": "34px",
-                                      "letterSpacing": "-0.01em",
-                                      "fontWeight": "700"
-                              }
-                      ],
-                      "headline-lg": [
-                              "32px",
-                              {
-                                      "lineHeight": "40px",
-                                      "letterSpacing": "-0.01em",
-                                      "fontWeight": "700"
-                              }
-                      ],
-                      "body-md": [
-                              "16px",
-                              {
-                                      "lineHeight": "24px",
-                                      "fontWeight": "400"
-                              }
-                      ]
-              }
-      },
-          },
-        }
-    </script>
+<link href="css/tailwind.css?v=1" rel="stylesheet"/>
 <style>
         /* Custom scrollbar for dark mode */
         ::-webkit-scrollbar {
@@ -242,27 +79,15 @@
                 </a>
 </li>
 <li>
-<a class="text-on-surface-variant mx-2 px-4 py-3 flex items-center gap-3 hover:bg-surface-variant rounded-lg transition-all duration-200 ease-in-out font-label-md text-label-md" href="catalogo.html?cat=componentes">
-<span class="material-symbols-outlined">settings</span>
-                    Componentes
-                </a>
-</li>
-<li>
-<a class="text-on-surface-variant mx-2 px-4 py-3 flex items-center gap-3 hover:bg-surface-variant rounded-lg transition-all duration-200 ease-in-out font-label-md text-label-md" href="catalogo.html?cat=accesorios">
-<span class="material-symbols-outlined">backpack</span>
-                    Accesorios
+<a class="text-on-surface-variant mx-2 px-4 py-3 flex items-center gap-3 hover:bg-surface-variant rounded-lg transition-all duration-200 ease-in-out font-label-md text-label-md" href="ofertas.html">
+<span class="material-symbols-outlined">sell</span>
+                    Ofertas
                 </a>
 </li>
 <li>
 <a class="text-on-surface-variant mx-2 px-4 py-3 flex items-center gap-3 hover:bg-surface-variant rounded-lg transition-all duration-200 ease-in-out font-label-md text-label-md" href="#">
 <span class="material-symbols-outlined">build</span>
                     Taller
-                </a>
-</li>
-<li>
-<a class="text-on-surface-variant mx-2 px-4 py-3 flex items-center gap-3 hover:bg-surface-variant rounded-lg transition-all duration-200 ease-in-out font-label-md text-label-md" href="#">
-<span class="material-symbols-outlined">sell</span>
-                    Ofertas
                 </a>
 </li>
 </ul>
@@ -301,32 +126,11 @@
                     </h4>
 <div class="space-y-2" id="category-filters">
 <label class="flex items-center gap-2 cursor-pointer group">
-<input class="peer sr-only cat-filter" data-cat="ruta" type="checkbox"/>
-<div class="w-4 h-4 rounded border border-primary-container peer-checked:bg-secondary-fixed peer-checked:border-secondary-fixed flex items-center justify-center transition-colors">
-<span class="material-symbols-outlined text-[12px] text-background opacity-0 peer-checked:opacity-100 font-bold">check</span>
-</div>
-<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface transition-colors">Ruta</span>
-</label>
-<label class="flex items-center gap-2 cursor-pointer group">
 <input class="peer sr-only cat-filter" data-cat="mtb" type="checkbox"/>
 <div class="w-4 h-4 rounded border border-primary-container peer-checked:bg-secondary-fixed peer-checked:border-secondary-fixed flex items-center justify-center transition-colors">
 <span class="material-symbols-outlined text-[12px] text-background opacity-0 peer-checked:opacity-100 font-bold">check</span>
 </div>
 <span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface transition-colors">MTB / Montañeras</span>
-</label>
-<label class="flex items-center gap-2 cursor-pointer group">
-<input class="peer sr-only cat-filter" data-cat="urbana" type="checkbox"/>
-<div class="w-4 h-4 rounded border border-primary-container peer-checked:bg-secondary-fixed peer-checked:border-secondary-fixed flex items-center justify-center transition-colors">
-<span class="material-symbols-outlined text-[12px] text-background opacity-0 peer-checked:opacity-100 font-bold">check</span>
-</div>
-<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface transition-colors">Urbanas</span>
-</label>
-<label class="flex items-center gap-2 cursor-pointer group">
-<input class="peer sr-only cat-filter" data-cat="electrica" type="checkbox"/>
-<div class="w-4 h-4 rounded border border-primary-container peer-checked:bg-secondary-fixed peer-checked:border-secondary-fixed flex items-center justify-center transition-colors">
-<span class="material-symbols-outlined text-[12px] text-background opacity-0 peer-checked:opacity-100 font-bold">check</span>
-</div>
-<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface transition-colors">Eléctricas</span>
 </label>
 <label class="flex items-center gap-2 cursor-pointer group">
 <input class="peer sr-only cat-filter" data-cat="bmx" type="checkbox"/>
@@ -341,27 +145,6 @@
 <span class="material-symbols-outlined text-[12px] text-background opacity-0 peer-checked:opacity-100 font-bold">check</span>
 </div>
 <span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface transition-colors">Infantiles</span>
-</label>
-<label class="flex items-center gap-2 cursor-pointer group">
-<input class="peer sr-only cat-filter" data-cat="plegable" type="checkbox"/>
-<div class="w-4 h-4 rounded border border-primary-container peer-checked:bg-secondary-fixed peer-checked:border-secondary-fixed flex items-center justify-center transition-colors">
-<span class="material-symbols-outlined text-[12px] text-background opacity-0 peer-checked:opacity-100 font-bold">check</span>
-</div>
-<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface transition-colors">Plegables</span>
-</label>
-<label class="flex items-center gap-2 cursor-pointer group">
-<input class="peer sr-only cat-filter" data-cat="componentes" type="checkbox"/>
-<div class="w-4 h-4 rounded border border-primary-container peer-checked:bg-secondary-fixed peer-checked:border-secondary-fixed flex items-center justify-center transition-colors">
-<span class="material-symbols-outlined text-[12px] text-background opacity-0 peer-checked:opacity-100 font-bold">check</span>
-</div>
-<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface transition-colors">Componentes</span>
-</label>
-<label class="flex items-center gap-2 cursor-pointer group">
-<input class="peer sr-only cat-filter" data-cat="accesorios" type="checkbox"/>
-<div class="w-4 h-4 rounded border border-primary-container peer-checked:bg-secondary-fixed peer-checked:border-secondary-fixed flex items-center justify-center transition-colors">
-<span class="material-symbols-outlined text-[12px] text-background opacity-0 peer-checked:opacity-100 font-bold">check</span>
-</div>
-<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface transition-colors">Accesorios y Repuestos</span>
 </label>
 </div>
 </div>
@@ -411,26 +194,26 @@
 <footer class="bg-surface-container-lowest dark:bg-surface-container-lowest text-secondary-fixed w-full border-t border-outline-variant grid grid-cols-2 md:grid-cols-4 gap-gutter px-container-margin-mobile md:px-container-margin-desktop py-stack-xl max-w-7xl mx-auto pb-32 md:pb-stack-xl">
 <div class="col-span-2 md:col-span-1">
 <h2 class="font-headline-md text-headline-md text-secondary-fixed mb-4">BiciFast</h2>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">Expertos en alto rendimiento ciclista. Componentes y tecnología para superar tus límites.</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">BMX, montañeras y bicicletas infantiles al mejor precio en Perú.</p>
 </div>
 <div>
 <h3 class="font-label-md text-label-md text-secondary mb-3 uppercase tracking-wider">Catálogo</h3>
 <ul class="space-y-2">
-<li><a class="font-label-sm text-label-sm text-secondary-fixed underline opacity-80 hover:opacity-100 hover:text-secondary transition-colors" href="catalogo.html?cat=ruta">Bicicletas de Ruta</a></li>
-<li><a class="font-label-sm text-label-sm text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary transition-colors" href="catalogo.html?cat=mtb">MTB</a></li>
-<li><a class="font-label-sm text-label-sm text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary transition-colors" href="catalogo.html?cat=electrica">E-bikes</a></li>
+<li><a class="font-label-sm text-label-sm text-secondary-fixed underline opacity-80 hover:opacity-100 hover:text-secondary transition-colors" href="catalogo.html?cat=mtb">Montañeras</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary transition-colors" href="catalogo.html?cat=bmx">BMX</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary transition-colors" href="catalogo.html?cat=ninos">Infantiles</a></li>
 </ul>
 </div>
 <div>
 <h3 class="font-label-md text-label-md text-secondary mb-3 uppercase tracking-wider">Soporte</h3>
 <ul class="space-y-2">
-<li><a class="font-label-sm text-label-sm text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary transition-colors" href="#">Garantía</a></li>
-<li><a class="font-label-sm text-label-sm text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary transition-colors" href="#">Envíos</a></li>
-<li><a class="font-label-sm text-label-sm text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary transition-colors" href="#">Contacto</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary transition-colors" href="garantia.html">Garantía</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary transition-colors" href="envios.html">Envíos</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary transition-colors" href="contacto.html">Contacto</a></li>
 </ul>
 </div>
 <div class="col-span-2 md:col-span-4 mt-stack-md pt-stack-md border-t border-outline-variant/30 text-center">
-<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 BiciFast Perú. Expertos en alto rendimiento.</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 BiciFast Perú.</p>
 </div>
 </footer>
 <!-- BottomNavBar (Mobile Only) -->

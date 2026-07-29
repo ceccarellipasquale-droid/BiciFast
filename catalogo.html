@@ -18,7 +18,7 @@
 <meta content="Montañeras, BMX e infantiles." name="twitter:description"/>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="css/tailwind.css?v=2" rel="stylesheet"/>
+<link href="css/tailwind.css?v=3" rel="stylesheet"/>
 <style>
         /* Custom scrollbar for dark mode */
         ::-webkit-scrollbar {
@@ -95,7 +95,7 @@
 <!-- Main Content -->
 <main class="flex-1 pt-24 pb-20 px-container-margin-mobile md:px-container-margin-desktop max-w-7xl mx-auto w-full flex flex-col md:flex-row gap-gutter">
 <!-- Mobile Search & Filter Bar -->
-<div class="md:hidden flex flex-col gap-unit mb-stack-md sticky top-20 z-40 bg-background/95 backdrop-blur py-2 -mx-container-margin-mobile px-container-margin-mobile border-b border-outline-variant/30">
+<div class="md:hidden flex flex-col gap-unit mb-stack-md sticky top-20 z-40 bg-background/95 backdrop-blur py-2 -mx-container-margin-mobile px-container-margin-mobile border-b border-outline-variant/30 transition-[top] duration-300" id="mobile-search-bar">
 <div class="relative w-full">
 <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
 <input class="w-full bg-surface-container-high border border-transparent focus:border-secondary-fixed text-on-surface font-body-md text-body-md rounded-lg pl-10 pr-4 py-3 transition-colors outline-none placeholder:text-on-surface-variant" id="search-input-mobile" placeholder="Buscar productos..." type="text"/>
@@ -271,19 +271,31 @@
             }
         }
 
-        // Hide app bar on scroll down, show on scroll up
+        // Hide app bar on scroll down, show on scroll up.
+        // The mobile search bar sticks right below it, so its "top" offset
+        // must follow the app bar: top-20 while visible, top-0 once hidden,
+        // otherwise it leaves a gap and product cards peek out awkwardly.
         let lastScroll = 0;
         const appBar = document.getElementById('top-app-bar');
+        const mobileSearchBar = document.getElementById('mobile-search-bar');
+        function setAppBarHidden(hidden) {
+            appBar.classList.toggle('-translate-y-full', hidden);
+            if (mobileSearchBar) {
+                mobileSearchBar.classList.toggle('top-20', !hidden);
+                mobileSearchBar.classList.toggle('top-0', hidden);
+            }
+        }
         window.addEventListener('scroll', () => {
             const currentScroll = window.pageYOffset;
             if (currentScroll <= 0) {
-                appBar.classList.remove('-translate-y-full');
+                setAppBarHidden(false);
+                lastScroll = currentScroll;
                 return;
             }
             if (currentScroll > lastScroll && !appBar.classList.contains('-translate-y-full')) {
-                appBar.classList.add('-translate-y-full');
+                setAppBarHidden(true);
             } else if (currentScroll < lastScroll && appBar.classList.contains('-translate-y-full')) {
-                appBar.classList.remove('-translate-y-full');
+                setAppBarHidden(false);
             }
             lastScroll = currentScroll;
         });

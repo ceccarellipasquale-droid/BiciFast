@@ -295,7 +295,8 @@ const BICIFAST_PRODUCTS = [
     image: "img/productos/montaneras/schneider-aro29-amarilla-1.jpg",
     gallery: ["img/productos/montaneras/schneider-aro29-amarilla-1.jpg", "img/productos/montaneras/schneider-aro29-amarilla-2.jpg", "img/productos/montaneras/schneider-aro29-amarilla-3-cambios.jpg"],
     colors: [
-      { name: "Amarilla", hex: "#d4d400", accent: "#111111", images: ["img/productos/montaneras/schneider-aro29-amarilla-1.jpg", "img/productos/montaneras/schneider-aro29-amarilla-2.jpg", "img/productos/montaneras/schneider-aro29-amarilla-3-cambios.jpg"] }
+      { name: "Amarilla", hex: "#d4d400", accent: "#111111", images: ["img/productos/montaneras/schneider-aro29-amarilla-1.jpg", "img/productos/montaneras/schneider-aro29-amarilla-2.jpg", "img/productos/montaneras/schneider-aro29-amarilla-3-cambios.jpg"] },
+      { name: "Roja / Negra", hex: "#c62828", accent: "#111111", images: ["img/productos/montaneras/schneider-aro29-roja-1.jpg", "img/productos/montaneras/schneider-aro29-roja-2.jpg"] }
     ],
     sizes: [],
     unavailableSizes: [],
@@ -380,7 +381,7 @@ const BICIFAST_PRODUCTS = [
     brand: "MBK",
     category: "ninos",
     categoryLabel: "Bicicletas Infantiles",
-    price: 300,
+    price: 290,
     oldPrice: null,
     badge: null,
     rating: 4.6,
@@ -405,7 +406,7 @@ const BICIFAST_PRODUCTS = [
     brand: "MBK",
     category: "ninos",
     categoryLabel: "Bicicletas Infantiles",
-    price: 499,
+    price: 550,
     oldPrice: null,
     badge: null,
     rating: 4.7,
@@ -416,11 +417,38 @@ const BICIFAST_PRODUCTS = [
     gallery: ["img/productos/infantiles/mbk-aro24-mtb-roja-1.jpg", "img/productos/infantiles/mbk-aro24-mtb-roja-2.jpg"],
     colors: [
       { name: "Roja", hex: "#c62828", accent: "#111111", images: ["img/productos/infantiles/mbk-aro24-mtb-roja-1.jpg", "img/productos/infantiles/mbk-aro24-mtb-roja-2.jpg"] },
-      { name: "Rosa", hex: "#f06292", accent: "#111111", images: ["img/productos/infantiles/mbk-aro24-mtb-rosa-1.jpg", "img/productos/infantiles/mbk-aro24-mtb-rosa-2.jpg"] }
+      { name: "Rosa", hex: "#f06292", accent: "#111111", images: ["img/productos/infantiles/mbk-aro24-mtb-rosa-1.jpg", "img/productos/infantiles/mbk-aro24-mtb-rosa-2.jpg"] },
+      { name: "Negra", hex: "#1a1a1a", accent: "#3a3a3a", images: ["img/productos/infantiles/mbk-aro24-mtb-negra-1.jpg", "img/productos/infantiles/mbk-aro24-mtb-negra-2.jpg"] }
     ],
     sizes: [],
     unavailableSizes: [],
     specs: { "Cambios": "Shimano Tourney 7x3", "Asiento": "Ancho, acolchado tipo gel", "Catalina": "Acerada", "Pedales": "Aluminio, plataforma ancha", "Llantas": "Wanda multipropósito nylon", "Maniguetas": "Silicona", "Frenos": "Disco", "Suspensión": "Delantera con bloqueo manual y control de rebote", "Garantía": "3 años en chasis, 1 año de servicio técnico", "Aro": "24" },
+    installments: null
+  },
+  {
+    id: "mbk-aro29",
+    name: "MBK Aro 29",
+    brand: "MBK",
+    category: "mtb",
+    categoryLabel: "Bicicletas Montañeras (MTB)",
+    price: 650,
+    oldPrice: null,
+    badge: null,
+    rating: 4.7,
+    reviews: 3,
+    short: "MTB aro 29 con suspensión delantera, frenos de disco y cambios Shimano Tourney 7x3.",
+    description: "Montañera aro 29, con sistema de cambios Shimano Tourney 7x3, suspensión delantera con bloqueo manual y control de rebote, frenos de disco, asiento ancho acolchado tipo gel y pedales de aluminio de plataforma ancha. Garantía de 3 años en chasis y 1 año de servicio técnico.",
+    image: "img/productos/montaneras/mbk-aro29-negra-1.jpg",
+    gallery: ["img/productos/montaneras/mbk-aro29-negra-1.jpg", "img/productos/montaneras/mbk-aro29-negra-2.jpg"],
+    colors: [
+      { name: "Negra", hex: "#1a1a1a", accent: "#3a3a3a", images: ["img/productos/montaneras/mbk-aro29-negra-1.jpg", "img/productos/montaneras/mbk-aro29-negra-2.jpg"] },
+      { name: "Negro / Azul", hex: "#1a1a1a", accent: "#1e5fbf", images: ["img/productos/montaneras/mbk-aro29-negro-azul-1.jpg", "img/productos/montaneras/mbk-aro29-negro-azul-2.jpg"] },
+      { name: "Plomo", hex: "#9e9e9e", accent: "#111111", images: ["img/productos/montaneras/mbk-aro29-plomo-1.jpg", "img/productos/montaneras/mbk-aro29-plomo-2.jpg"] },
+      { name: "Roja", hex: "#c62828", accent: "#111111", images: ["img/productos/montaneras/mbk-aro29-roja-1.jpg", "img/productos/montaneras/mbk-aro29-roja-2.jpg"] }
+    ],
+    sizes: [],
+    unavailableSizes: [],
+    specs: { "Cambios": "Shimano Tourney 7x3", "Asiento": "Ancho, acolchado tipo gel", "Catalina": "Acerada", "Pedales": "Aluminio, plataforma ancha", "Llantas": "Wanda multipropósito nylon", "Maniguetas": "Silicona", "Frenos": "Disco", "Suspensión": "Delantera con bloqueo manual y control de rebote", "Garantía": "3 años en chasis, 1 año de servicio técnico", "Aro": "29" },
     installments: null
   }
 ];

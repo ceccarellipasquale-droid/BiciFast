@@ -373,6 +373,55 @@ const BICIFAST_PRODUCTS = [
     unavailableSizes: [],
     specs: { "Velocidades": "18, tipo moto", "Cuadro": "Acerado", "Asiento": "Tipo gel", "Catalina": "Acero revestida", "Pedales": "Con rodajes de vaquelita", "Aros": "Doble pared, aluminio", "Ajuste delantero": "Rápido", "Frenos": "V-brake", "Garantía": "3 años en chasis, 1 año de servicio técnico", "Aro": "26" },
     installments: null
+  },
+  {
+    id: "mbk-aro20",
+    name: "MBK Aro 20",
+    brand: "MBK",
+    category: "ninos",
+    categoryLabel: "Bicicletas Infantiles",
+    price: 300,
+    oldPrice: null,
+    badge: null,
+    rating: 4.6,
+    reviews: 3,
+    short: "Bicicleta infantil aro 20 importada, con parrilla, canastilla y rayos gruesos de colores.",
+    description: "Bicicleta infantil aro 20 importada, con parrilla y canastilla metálicas, luces auxiliares, llantas anchas de nylon, rayos gruesos de colores, asiento tipo gel acolchado y maniguetas ergonómicas. Incluye casco de regalo y timbre tipo chicharra.",
+    image: "img/productos/infantiles/mbk-aro20-celeste-1.jpg",
+    gallery: ["img/productos/infantiles/mbk-aro20-celeste-1.jpg", "img/productos/infantiles/mbk-aro20-celeste-2.jpg"],
+    colors: [
+      { name: "Celeste", hex: "#29b6f6", accent: "#111111", images: ["img/productos/infantiles/mbk-aro20-celeste-1.jpg", "img/productos/infantiles/mbk-aro20-celeste-2.jpg"] },
+      { name: "Roja", hex: "#c62828", accent: "#111111", images: ["img/productos/infantiles/mbk-aro20-roja-1.jpg", "img/productos/infantiles/mbk-aro20-roja-2.jpg"] },
+      { name: "Verde", hex: "#4caf50", accent: "#111111", images: ["img/productos/infantiles/mbk-aro20-verde-1.jpg", "img/productos/infantiles/mbk-aro20-verde-2.jpg"] }
+    ],
+    sizes: [],
+    unavailableSizes: [],
+    specs: { "Origen": "Importada", "Parrilla": "Metálica", "Canastilla": "Metálica", "Luces": "Auxiliares con luces", "Llantas": "Anchas de nylon", "Rayos": "Gruesos, de colores", "Asiento": "Tipo gel acolchado", "Maniguetas": "Ergonómicas", "Incluye": "Casco de regalo y timbre tipo chicharra", "Aro": "20" },
+    installments: null
+  },
+  {
+    id: "mbk-aro24-mtb",
+    name: "MBK Aro 24 MTB",
+    brand: "MBK",
+    category: "ninos",
+    categoryLabel: "Bicicletas Infantiles",
+    price: 499,
+    oldPrice: null,
+    badge: null,
+    rating: 4.7,
+    reviews: 3,
+    short: "MTB infantil aro 24 con suspensión delantera, frenos de disco y cambios Shimano Tourney 7x3.",
+    description: "Montañera infantil aro 24, con sistema de cambios Shimano Tourney 7x3, suspensión delantera con bloqueo manual y control de rebote, frenos de disco, asiento ancho acolchado tipo gel y pedales de aluminio de plataforma ancha. Garantía de 3 años en chasis y 1 año de servicio técnico.",
+    image: "img/productos/infantiles/mbk-aro24-mtb-roja-1.jpg",
+    gallery: ["img/productos/infantiles/mbk-aro24-mtb-roja-1.jpg", "img/productos/infantiles/mbk-aro24-mtb-roja-2.jpg"],
+    colors: [
+      { name: "Roja", hex: "#c62828", accent: "#111111", images: ["img/productos/infantiles/mbk-aro24-mtb-roja-1.jpg", "img/productos/infantiles/mbk-aro24-mtb-roja-2.jpg"] },
+      { name: "Rosa", hex: "#f06292", accent: "#111111", images: ["img/productos/infantiles/mbk-aro24-mtb-rosa-1.jpg", "img/productos/infantiles/mbk-aro24-mtb-rosa-2.jpg"] }
+    ],
+    sizes: [],
+    unavailableSizes: [],
+    specs: { "Cambios": "Shimano Tourney 7x3", "Asiento": "Ancho, acolchado tipo gel", "Catalina": "Acerada", "Pedales": "Aluminio, plataforma ancha", "Llantas": "Wanda multipropósito nylon", "Maniguetas": "Silicona", "Frenos": "Disco", "Suspensión": "Delantera con bloqueo manual y control de rebote", "Garantía": "3 años en chasis, 1 año de servicio técnico", "Aro": "24" },
+    installments: null
   }
 ];
 

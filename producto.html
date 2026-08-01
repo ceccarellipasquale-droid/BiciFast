@@ -19,7 +19,7 @@
 <meta content="Descubre esta bicicleta en BiciFast." name="twitter:description" id="twitter-description"/>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="css/tailwind.css?v=5" rel="stylesheet"/>
+<link href="css/tailwind.css?v=6" rel="stylesheet"/>
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -195,6 +195,7 @@
                 </div>`).join('');
             dots.innerHTML = images.map((_, i) => `
                 <div class="w-2 h-2 rounded-full ${i === 0 ? 'bg-secondary-fixed' : 'bg-on-surface-variant/40'}"></div>`).join('');
+            track.scrollLeft = 0;
         }
 
         function renderVariants() {
@@ -376,6 +377,15 @@
         document.getElementById('btn-buy-now').addEventListener('click', () => {
             addToCart(product.id, { color: selectedColor, size: selectedSize, variant: selectedVariant, qty: 1 });
             window.location.href = 'carrito.html';
+        });
+
+        document.getElementById('gallery-track').addEventListener('scroll', (e) => {
+            const track = e.target;
+            const index = Math.round(track.scrollLeft / track.clientWidth);
+            document.querySelectorAll('#gallery-dots > div').forEach((dot, i) => {
+                dot.classList.toggle('bg-secondary-fixed', i === index);
+                dot.classList.toggle('bg-on-surface-variant/40', i !== index);
+            });
         });
 
         renderProduct();

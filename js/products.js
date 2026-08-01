@@ -301,6 +301,78 @@ const BICIFAST_PRODUCTS = [
     unavailableSizes: [],
     specs: { "Estructura": "Full aluminio", "Talla": "L", "Cambios": "Shimano Altus 8x3 integrado", "Aro": "29" },
     installments: null
+  },
+  {
+    id: "aerofox-aro26-deportiva",
+    name: "Aerofox Aro 26 Deportiva",
+    brand: "Aerofox",
+    category: "mtb",
+    categoryLabel: "Bicicletas Montañeras (MTB)",
+    price: 290,
+    oldPrice: null,
+    badge: null,
+    rating: 4.6,
+    reviews: 4,
+    short: "MTB aro 26 con 18 velocidades tipo moto (gripshift) y aros de aluminio, la opción más accesible.",
+    description: "Montañera aro 26 con 18 velocidades tipo moto (gripshift), aros de aluminio y llantas anchas multipropósito. Asiento ligero, pedales de resina y catalina con revestimiento PVC.",
+    image: "img/productos/montaneras/aerofox-aro26-azul-1.jpg",
+    gallery: ["img/productos/montaneras/aerofox-aro26-azul-1.jpg", "img/productos/montaneras/aerofox-aro26-azul-2.jpg"],
+    colors: [
+      { name: "Azul", hex: "#1e5fbf", accent: "#111111", images: ["img/productos/montaneras/aerofox-aro26-azul-1.jpg", "img/productos/montaneras/aerofox-aro26-azul-2.jpg"] },
+      { name: "Púrpura", hex: "#9c27b0", accent: "#111111", images: ["img/productos/montaneras/aerofox-aro26-purpura-1.jpg", "img/productos/montaneras/aerofox-aro26-purpura-2.jpg"] },
+      { name: "Roja", hex: "#c62828", accent: "#111111", images: ["img/productos/montaneras/aerofox-aro26-roja-1.jpg", "img/productos/montaneras/aerofox-aro26-roja-2.jpg"] }
+    ],
+    sizes: [],
+    unavailableSizes: [],
+    specs: { "Velocidades": "18, tipo moto (gripshift)", "Aros": "Aluminio", "Llantas": "Anchas multipropósito", "Asiento": "Ligero", "Pedales": "Resina", "Catalina": "Revestimiento PVC", "Aro": "26" },
+    installments: null
+  },
+  {
+    id: "aerofox-aro26-mtb",
+    name: "Aerofox Aro 26 MTB",
+    brand: "Aerofox",
+    category: "mtb",
+    categoryLabel: "Bicicletas Montañeras (MTB)",
+    price: 330,
+    oldPrice: null,
+    badge: null,
+    rating: 4.7,
+    reviews: 5,
+    short: "MTB aro 26 con 18 velocidades tipo moto, frenos v-brake de alta precisión y rueda delantera con liberador rápido.",
+    description: "Montañera aro 26 con 18 velocidades tipo moto (gripshift), llantas anchas multipropósito de nylon, asiento acolchado tipo gel ancho, frenos v-brake de alta precisión y rueda delantera con liberador manual rápido. Aros doble pared con rayos negros anticorrosión. Garantía de 3 años en chasis y 1 año de servicio técnico.",
+    image: "img/productos/montaneras/aerofox-aro26-mtb-amarilla-1.jpg",
+    gallery: ["img/productos/montaneras/aerofox-aro26-mtb-amarilla-1.jpg", "img/productos/montaneras/aerofox-aro26-mtb-amarilla-2.jpg"],
+    colors: [
+      { name: "Amarilla", hex: "#d4d400", accent: "#111111", images: ["img/productos/montaneras/aerofox-aro26-mtb-amarilla-1.jpg", "img/productos/montaneras/aerofox-aro26-mtb-amarilla-2.jpg"] },
+      { name: "Verde", hex: "#4caf50", accent: "#111111", images: ["img/productos/montaneras/aerofox-aro26-mtb-verde-1.jpg", "img/productos/montaneras/aerofox-aro26-mtb-verde-2.jpg"] }
+    ],
+    sizes: [],
+    unavailableSizes: [],
+    specs: { "Velocidades": "18, tipo moto (gripshift)", "Llantas": "Anchas multipropósito de nylon", "Asiento": "Acolchado tipo gel ancho", "Frenos": "V-brake de alta precisión", "Rueda delantera": "Con liberador manual rápido", "Aros": "Doble pared, rayos negros anticorrosión", "Garantía": "3 años en chasis, 1 año de servicio técnico", "Aro": "26" },
+    installments: null
+  },
+  {
+    id: "aerofox-aro26-dama",
+    name: "Aerofox Aro 26 Montañera Clásica Dama",
+    brand: "Aerofox",
+    category: "mtb",
+    categoryLabel: "Bicicletas Montañeras (MTB)",
+    price: 399,
+    oldPrice: null,
+    badge: null,
+    rating: 4.7,
+    reviews: 3,
+    short: "MTB aro 26 para dama, cuadro acerado, 18 velocidades tipo moto y ajuste rápido delantero.",
+    description: "Montañera aro 26 clásica para dama, con cuadro acerado, 18 velocidades tipo moto, asiento tipo gel, catalina de acero revestida, pedales con rodajes de vaquelita y aros doble pared de aluminio. Ajuste rápido delantero y sistema de frenos v-brake. Garantía de 3 años en chasis y 1 año de servicio técnico.",
+    image: "img/productos/montaneras/aerofox-aro26-dama-rosada-1.jpg",
+    gallery: ["img/productos/montaneras/aerofox-aro26-dama-rosada-1.jpg", "img/productos/montaneras/aerofox-aro26-dama-rosada-2.jpg"],
+    colors: [
+      { name: "Rosada", hex: "#e91e8c", accent: "#111111", images: ["img/productos/montaneras/aerofox-aro26-dama-rosada-1.jpg", "img/productos/montaneras/aerofox-aro26-dama-rosada-2.jpg"] }
+    ],
+    sizes: [],
+    unavailableSizes: [],
+    specs: { "Velocidades": "18, tipo moto", "Cuadro": "Acerado", "Asiento": "Tipo gel", "Catalina": "Acero revestida", "Pedales": "Con rodajes de vaquelita", "Aros": "Doble pared, aluminio", "Ajuste delantero": "Rápido", "Frenos": "V-brake", "Garantía": "3 años en chasis, 1 año de servicio técnico", "Aro": "26" },
+    installments: null
   }
 ];
 

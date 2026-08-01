@@ -208,6 +208,99 @@ const BICIFAST_PRODUCTS = [
     unavailableSizes: [],
     specs: { "Estructura": "Aluminio", "Suspensión": "Delantera", "Aros": "Aluminio", "Mazas": "Aluminio", "Frenos": "Disco", "Asiento": "Tipo gel deportivo", "Extras": "Timbre integrado a la manija" },
     installments: "Hasta 6 cuotas sin intereses"
+  },
+  {
+    id: "cross-aro12-equilibrio",
+    name: "Cross Aro 12 de Equilibrio",
+    brand: "Cross",
+    category: "ninos",
+    categoryLabel: "Bicicletas Infantiles",
+    price: 299,
+    oldPrice: null,
+    badge: null,
+    rating: 4.7,
+    reviews: 3,
+    short: "Bici de equilibrio sin pedales, cuadro de aleación de magnesio hidroformado, ideal para los primeros pasos en bici.",
+    description: "Bicicleta de equilibrio (sin pedales), diseñada para que los niños aprendan a mantener el balance antes de pasar a una bici con pedales. Cuadro de aleación de magnesio hidroformado: liviano y resistente.",
+    image: "img/productos/infantiles/cross-aro12-blanca-1.jpg",
+    gallery: ["img/productos/infantiles/cross-aro12-blanca-1.jpg", "img/productos/infantiles/cross-aro12-blanca-2.jpg"],
+    colors: [
+      { name: "Blanca", hex: "#f5f5f5", accent: "#111111", images: ["img/productos/infantiles/cross-aro12-blanca-1.jpg", "img/productos/infantiles/cross-aro12-blanca-2.jpg"] },
+      { name: "Violeta", hex: "#8e44ad", accent: "#111111", images: ["img/productos/infantiles/cross-aro12-violeta-1.jpg", "img/productos/infantiles/cross-aro12-violeta-2.jpg"] }
+    ],
+    sizes: [],
+    unavailableSizes: [],
+    specs: { "Cuadro": "Aleación de magnesio hidroformado", "Tipo": "Bici de equilibrio (sin pedales)", "Aro": "12" },
+    installments: null
+  },
+  {
+    id: "trexx-aro29-doble-suspension",
+    name: "Trexx Aro 29 Doble Suspensión",
+    brand: "Trex-X",
+    category: "mtb",
+    categoryLabel: "Bicicletas Montañeras (MTB)",
+    price: 750,
+    oldPrice: null,
+    badge: null,
+    rating: 4.8,
+    reviews: 5,
+    short: "MTB doble suspensión con cambios Shimano Rapidfire de 21 velocidades y llantas anchas 2.35 Kenda multipropósito.",
+    description: "Montañera aro 29 de doble suspensión, equipada con sistema de cambios Shimano Rapidfire de 21 velocidades y llantas anchas 2.35 Kenda multipropósito. Ideal para trocha y uso exigente.",
+    image: "img/productos/montaneras/trexx-aro29-azul-1.jpg",
+    gallery: ["img/productos/montaneras/trexx-aro29-azul-1.jpg", "img/productos/montaneras/trexx-aro29-azul-2.jpg", "img/productos/montaneras/trexx-aro29-azul-3-cambios.jpg"],
+    colors: [
+      { name: "Azul", hex: "#1e5fbf", accent: "#111111", images: ["img/productos/montaneras/trexx-aro29-azul-1.jpg", "img/productos/montaneras/trexx-aro29-azul-2.jpg", "img/productos/montaneras/trexx-aro29-azul-3-cambios.jpg"] }
+    ],
+    sizes: [],
+    unavailableSizes: [],
+    specs: { "Suspensión": "Doble", "Cambios": "Shimano Rapidfire, 21 velocidades", "Llantas": "Anchas 2.35 Kenda multipropósito", "Aro": "29" },
+    installments: null
+  },
+  {
+    id: "fenix-aro29",
+    name: "Fénix Aro 29",
+    brand: "Fénix",
+    category: "mtb",
+    categoryLabel: "Bicicletas Montañeras (MTB)",
+    price: 599,
+    oldPrice: null,
+    badge: null,
+    rating: 4.7,
+    reviews: 4,
+    short: "MTB aro 29 con cuadro hidroformado, 21 velocidades y frenos de disco mecánico.",
+    description: "Montañera aro 29 con cuadro hidroformado, sistema de 21 velocidades y frenos de disco mecánico. Ligera y ágil para rutas exigentes.",
+    image: "img/productos/montaneras/fenix-roja-1.jpg",
+    gallery: ["img/productos/montaneras/fenix-roja-1.jpg", "img/productos/montaneras/fenix-roja-2.jpg"],
+    colors: [
+      { name: "Roja", hex: "#c62828", accent: "#111111", images: ["img/productos/montaneras/fenix-roja-1.jpg", "img/productos/montaneras/fenix-roja-2.jpg"] }
+    ],
+    sizes: [],
+    unavailableSizes: [],
+    specs: { "Cuadro": "Hidroformado", "Velocidades": "21", "Frenos": "Disco mecánico", "Aro": "29" },
+    installments: null
+  },
+  {
+    id: "schneider-aro29",
+    name: "Schneider Aro 29",
+    brand: "Schneider",
+    category: "mtb",
+    categoryLabel: "Bicicletas Montañeras (MTB)",
+    price: 899,
+    oldPrice: null,
+    badge: null,
+    rating: 4.8,
+    reviews: 3,
+    short: "MTB full aluminio talla L con sistema de cambios Shimano Altus 8x3 integrado.",
+    description: "Montañera aro 29 full aluminio, talla L, con sistema de cambios Shimano Altus 8x3 integrado. Estructura ligera y resistente para rutas largas.",
+    image: "img/productos/montaneras/schneider-aro29-amarilla-1.jpg",
+    gallery: ["img/productos/montaneras/schneider-aro29-amarilla-1.jpg", "img/productos/montaneras/schneider-aro29-amarilla-2.jpg", "img/productos/montaneras/schneider-aro29-amarilla-3-cambios.jpg"],
+    colors: [
+      { name: "Amarilla", hex: "#d4d400", accent: "#111111", images: ["img/productos/montaneras/schneider-aro29-amarilla-1.jpg", "img/productos/montaneras/schneider-aro29-amarilla-2.jpg", "img/productos/montaneras/schneider-aro29-amarilla-3-cambios.jpg"] }
+    ],
+    sizes: [],
+    unavailableSizes: [],
+    specs: { "Estructura": "Full aluminio", "Talla": "L", "Cambios": "Shimano Altus 8x3 integrado", "Aro": "29" },
+    installments: null
   }
 ];
 

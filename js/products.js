@@ -334,7 +334,7 @@ const BICIFAST_PRODUCTS = [
     brand: "Aerofox",
     category: "mtb",
     categoryLabel: "Bicicletas Montañeras (MTB)",
-    price: 330,
+    price: 399,
     oldPrice: null,
     badge: null,
     rating: 4.7,

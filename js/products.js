@@ -545,6 +545,30 @@ const BICIFAST_PRODUCTS = [
     unavailableSizes: [],
     specs: { "Material": "Resina ultra resistente", "Uso": "MTB multifuncional" },
     installments: null
+  },
+  {
+    id: "maza-koozer-xm490",
+    name: "Mazas Posteriores Koozer XM490",
+    brand: "Koozer",
+    category: "accesorios",
+    categoryLabel: "Accesorios y Repuestos",
+    price: 240,
+    oldPrice: null,
+    badge: null,
+    rating: 4.6,
+    reviews: 2,
+    short: "Maza posterior tipo casetero Koozer XM490, disponible en 2 colores.",
+    description: "Maza posterior tipo casetero, modelo Koozer XM490. Disponible en color rojo o aluminio.",
+    image: "img/productos/accesorios/maza-koozer-xm490.jpg",
+    gallery: ["img/productos/accesorios/maza-koozer-xm490.jpg"],
+    colors: [
+      { name: "Rojo", hex: "#c62828", accent: "#111111", images: ["img/productos/accesorios/maza-koozer-xm490.jpg"] },
+      { name: "Aluminio", hex: "#c0c0c0", accent: "#111111", images: ["img/productos/accesorios/maza-koozer-xm490.jpg"] }
+    ],
+    sizes: [],
+    unavailableSizes: [],
+    specs: { "Tipo": "Casetero", "Modelo": "XM490", "Posición": "Posterior" },
+    installments: null
   }
 ];
 

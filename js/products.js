@@ -450,6 +450,30 @@ const BICIFAST_PRODUCTS = [
     unavailableSizes: [],
     specs: { "Cambios": "Shimano Tourney 7x3", "Asiento": "Ancho, acolchado tipo gel", "Catalina": "Acerada", "Pedales": "Aluminio, plataforma ancha", "Llantas": "Wanda multipropósito nylon", "Maniguetas": "Silicona", "Frenos": "Disco", "Suspensión": "Delantera con bloqueo manual y control de rebote", "Garantía": "3 años en chasis, 1 año de servicio técnico", "Aro": "29" },
     installments: null
+  },
+  {
+    id: "maza-arc7075-tb115",
+    name: "Par de Mazas ARC/7075 TB115",
+    brand: "ARC",
+    category: "accesorios",
+    categoryLabel: "Accesorios y Repuestos",
+    price: 290,
+    oldPrice: null,
+    badge: null,
+    rating: 4.7,
+    reviews: 2,
+    short: "Par de mazas MTB ARC/7075 TB115, aleación 7075, con cierre rápido y acabado tornasolado.",
+    description: "Par de mazas para MTB, modelo ARC/7075 TB115, en aleación de aluminio 7075 con acabado tornasolado. Incluyen cierre rápido delantero y trasero.",
+    image: "img/productos/accesorios/maza-arc7075-mt009-tornasol.jpg",
+    gallery: ["img/productos/accesorios/maza-arc7075-mt009-tornasol.jpg"],
+    colors: [
+      { name: "Tornasol (MT009)", hex: "#8e44ad", accent: "#111111", images: ["img/productos/accesorios/maza-arc7075-mt009-tornasol.jpg"] },
+      { name: "Lila (MT039)", hex: "#b455d9", accent: "#111111", images: ["img/productos/accesorios/maza-arc7075-mt039-lila.jpg"] }
+    ],
+    sizes: [],
+    unavailableSizes: [],
+    specs: { "Material": "Aleación de aluminio 7075", "Modelo": "TB115", "Cierre": "Rápido, delantero y trasero", "Uso": "MTB" },
+    installments: null
   }
 ];
 

@@ -474,6 +474,77 @@ const BICIFAST_PRODUCTS = [
     unavailableSizes: [],
     specs: { "Material": "Aleación de aluminio 7075", "Modelo": "TB115", "Cierre": "Rápido, delantero y trasero", "Uso": "MTB" },
     installments: null
+  },
+  {
+    id: "pedal-rockbros-amarillo",
+    name: "Pedales Rockbros Amarillo",
+    brand: "Rockbros",
+    category: "accesorios",
+    categoryLabel: "Accesorios y Repuestos",
+    price: 90,
+    oldPrice: null,
+    badge: null,
+    rating: 4.6,
+    reviews: 2,
+    short: "Pedales de aluminio con punteras delgadas, para MTB.",
+    description: "Pedales Rockbros de aluminio, con punteras delgadas, ideales para MTB. Livianos y resistentes.",
+    image: "img/productos/accesorios/pedal-rockbros-amarillo.jpg",
+    gallery: ["img/productos/accesorios/pedal-rockbros-amarillo.jpg"],
+    colors: [
+      { name: "Amarillo", hex: "#f9a825", accent: "#111111", images: ["img/productos/accesorios/pedal-rockbros-amarillo.jpg"] }
+    ],
+    sizes: [],
+    unavailableSizes: [],
+    specs: { "Material": "Aluminio", "Punteras": "Delgadas", "Uso": "MTB" },
+    installments: null
+  },
+  {
+    id: "pedal-rockbros-rojo",
+    name: "Pedales Rockbros Rojo",
+    brand: "Rockbros",
+    category: "accesorios",
+    categoryLabel: "Accesorios y Repuestos",
+    price: 90,
+    oldPrice: null,
+    badge: null,
+    rating: 4.7,
+    reviews: 2,
+    short: "Pedales de aleación de aluminio y fibra de magnesio, ultra delgados y ligeros, para MTB.",
+    description: "Pedales Rockbros de aleación de aluminio y fibra de magnesio, ultra delgados y ligeros. Ideales para MTB.",
+    image: "img/productos/accesorios/pedal-rockbros-rojo.jpg",
+    gallery: ["img/productos/accesorios/pedal-rockbros-rojo.jpg"],
+    colors: [
+      { name: "Rojo", hex: "#c62828", accent: "#111111", images: ["img/productos/accesorios/pedal-rockbros-rojo.jpg"] }
+    ],
+    sizes: [],
+    unavailableSizes: [],
+    specs: { "Material": "Aleación de aluminio y fibra de magnesio", "Peso": "Ultra ligero", "Uso": "MTB" },
+    installments: null
+  },
+  {
+    id: "pedal-xm-resina",
+    name: "Pedales XM Resina",
+    brand: "XM",
+    category: "accesorios",
+    categoryLabel: "Accesorios y Repuestos",
+    price: 65,
+    oldPrice: null,
+    badge: null,
+    rating: 4.5,
+    reviews: 3,
+    short: "Pedales de resina ultra resistente, ultra delgados y multifuncionales, para MTB.",
+    description: "Pedales XM de resina ultra resistente, ultra delgados y multifuncionales. Ideales para MTB.",
+    image: "img/productos/accesorios/pedal-xm-azul.jpg",
+    gallery: ["img/productos/accesorios/pedal-xm-azul.jpg"],
+    colors: [
+      { name: "Azul", hex: "#2f7fb3", accent: "#111111", images: ["img/productos/accesorios/pedal-xm-azul.jpg"] },
+      { name: "Azul Oscuro", hex: "#1d5a73", accent: "#111111", images: ["img/productos/accesorios/pedal-xm-azul-oscuro.jpg"] },
+      { name: "Naranja", hex: "#e8551a", accent: "#111111", images: ["img/productos/accesorios/pedal-xm-naranja.jpg"] }
+    ],
+    sizes: [],
+    unavailableSizes: [],
+    specs: { "Material": "Resina ultra resistente", "Uso": "MTB multifuncional" },
+    installments: null
   }
 ];
 
